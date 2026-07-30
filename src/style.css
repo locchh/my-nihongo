@@ -303,7 +303,7 @@ code {
  */
 .chart__cell,
 .card {
-  --cell-bg: hsl(var(--hue) 70% 92%);
+  --cell-bg: hsl(var(--hue) 85% 86%);
   --cell-fg: #14151a;
 }
 
@@ -532,10 +532,10 @@ code {
   margin-top: 2px;
 }
 
-/* On the card box, not a face, so the mark survives the flip. */
-.card--learned {
-  border-radius: 10px;
-  outline: 2.5px solid var(--accent);
+/* On both faces rather than the card box: it survives the flip, and it turns
+   with the card instead of hanging in place while the card rotates away. */
+.card--learned .card__face {
+  box-shadow: inset 0 0 0 2.5px var(--accent);
 }
 
 .controls {
@@ -549,11 +549,32 @@ code {
   transform: rotateY(180deg);
 }
 
-/* Hover previews the answer, but only where a pointer actually exists. */
+/*
+ * Hover must not reveal the answer. It used to, via
+ * `.card:not(.is-flipped):hover` — which also meant a second click could never
+ * turn the card back, because removing .is-flipped immediately re-matched the
+ * hover rule. Hover now only offers a cue that the card is clickable, which is
+ * also what the design wants: revealing takes a deliberate act.
+ */
 @media (hover: hover) {
-  .card:not(.is-flipped):hover .card__inner {
-    transform: rotateY(180deg);
+  .card:hover .card__face--front {
+    filter: brightness(0.95);
   }
+}
+
+/*
+ * Switching script or direction turns the whole board over rather than
+ * redrawing it. Written after the .is-flipped rule so it wins the tie, and
+ * scoped one level deeper so already-flipped cards turn with the rest.
+ */
+.board.is-turning .card .card__inner {
+  transform: rotateY(90deg);
+  transition: transform 160ms ease-in;
+}
+
+.board.is-entering .card .card__inner {
+  transform: rotateY(-90deg);
+  transition: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

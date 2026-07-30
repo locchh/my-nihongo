@@ -120,9 +120,39 @@ const markup = (): string => `
  * Flip-card practice in both directions. Each character holds both kana forms;
  * only the selected script is ever shown, so the prompt stays a single shape.
  */
+/** Must match the .is-turning transition in style.css. */
+const TURN_MS = 160
+
 export const renderPractice = (mount: HTMLElement): void => {
   const paint = () => {
     mount.innerHTML = markup()
+  }
+
+  /**
+   * Changing a toggle turns every card over in place instead of blanking the
+   * board and redrawing it. Cards rotate to edge-on, the content swaps while
+   * they are side-on and invisible, then they rotate back — the same motion as
+   * flipping one card, applied to all of them at once.
+   */
+  const turn = (change: () => void) => {
+    const board = mount.querySelector<HTMLElement>('.board')
+    if (!board || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      change()
+      return paint()
+    }
+    board.classList.add('is-turning')
+    setTimeout(() => {
+      change()
+      paint()
+      const next = mount.querySelector<HTMLElement>('.board')
+      if (!next) return
+      // Start the incoming faces side-on, then release them on the next frame
+      // so the browser animates the second half of the turn.
+      next.classList.add('is-entering')
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => next.classList.remove('is-entering')),
+      )
+    }, TURN_MS)
   }
 
   mount.addEventListener('click', (e) => {
@@ -130,14 +160,16 @@ export const renderPractice = (mount: HTMLElement): void => {
 
     const setScript = target.closest<HTMLElement>('[data-script]')
     if (setScript) {
-      script = setScript.dataset.script as Script
-      return paint()
+      const next = setScript.dataset.script as Script
+      if (next !== script) turn(() => (script = next))
+      return
     }
 
     const setDirection = target.closest<HTMLElement>('[data-direction]')
     if (setDirection) {
-      direction = setDirection.dataset.direction as Direction
-      return paint()
+      const next = setDirection.dataset.direction as Direction
+      if (next !== direction) turn(() => (direction = next))
+      return
     }
 
     // Sticky flip. Hover only previews, and only on pointer devices.
