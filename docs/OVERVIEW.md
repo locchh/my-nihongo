@@ -1,0 +1,4 @@
+- Hiragana
+- Katakana
+- Janji
+- Romaji
