@@ -294,3 +294,270 @@ code {
     border-right-color: var(--border);
   }
 }
+
+/* ---------- boards ---------- */
+
+/*
+ * One hue per gojūon row, set inline as --hue. Lightness is resolved here so a
+ * single hue works against both colour schemes.
+ */
+.chart__cell,
+.card {
+  --cell-bg: hsl(var(--hue) 70% 92%);
+  --cell-fg: #14151a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chart__cell,
+  .card {
+    --cell-bg: hsl(var(--hue) 30% 24%);
+    --cell-fg: #f3f4f6;
+  }
+}
+
+.site {
+  padding: 20px 16px 0;
+}
+
+.site__title {
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  & span {
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: 0;
+  }
+}
+
+.tabs,
+.toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.tabs__btn,
+.toggle__btn {
+  font: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 18px;
+  cursor: pointer;
+
+  &.is-active {
+    color: var(--text-h);
+    background: var(--accent-bg);
+    box-shadow: inset 0 0 0 1px var(--accent-border);
+  }
+}
+
+.board {
+  padding: 20px 16px 48px;
+}
+
+.board__note {
+  font-size: 14px;
+  max-width: 46ch;
+  margin: 16px auto;
+}
+
+/* ---------- chart ---------- */
+
+.chart__scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: 2rem repeat(5, minmax(3.75rem, 1fr));
+  gap: 5px;
+  min-width: 22rem;
+}
+
+.chart__label {
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-family: var(--mono);
+}
+
+.chart__cell {
+  background: var(--cell-bg);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.chart__cell--empty {
+  background: none;
+}
+
+/* Desaturate the band to mark these as retired, but do not fade the whole cell
+   — dimming the romaji strip too dropped it below the contrast threshold. */
+.chart__cell--obsolete {
+  filter: grayscale(1);
+}
+
+.chart__cell--obsolete .chart__kana {
+  opacity: 0.55;
+}
+
+.chart__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.chart__kana {
+  color: var(--cell-fg);
+  font-size: clamp(1.15rem, 4.2vw, 1.9rem);
+  line-height: 1.5;
+
+  &:first-child {
+    border-right: 1px solid rgb(0 0 0 / 0.08);
+  }
+}
+
+.chart__romaji {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 3px 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- practice cards ---------- */
+
+.group {
+  margin-top: 32px;
+}
+
+.group__title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.group__note {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.group__count {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  padding: 2px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+  gap: 8px;
+  /* Grid items stretch by default, and stretch beats aspect-ratio — without
+     this the cards resolve to zero height and both faces collapse together. */
+  align-items: start;
+}
+
+.card {
+  aspect-ratio: 1;
+  perspective: 600px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card__inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.35s;
+}
+
+.card__face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+/* Front and back set position and colour; --as-* sets type, since either face
+   can hold either a character or a reading depending on direction. */
+.card__face--front {
+  background: var(--cell-bg);
+  color: var(--cell-fg);
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+  background: var(--accent-bg);
+  color: var(--text-h);
+  box-shadow: inset 0 0 0 1px var(--accent-border);
+}
+
+.card__as-kana {
+  font-size: clamp(1.5rem, 6vw, 2.1rem);
+}
+
+.card__as-romaji {
+  font-family: var(--mono);
+  font-size: clamp(0.9rem, 3.4vw, 1.15rem);
+}
+
+.card__also {
+  display: block;
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* On the card box, not a face, so the mark survives the flip. */
+.card--learned {
+  border-radius: 10px;
+  outline: 2.5px solid var(--accent);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card.is-flipped .card__inner {
+  transform: rotateY(180deg);
+}
+
+/* Hover previews the answer, but only where a pointer actually exists. */
+@media (hover: hover) {
+  .card:not(.is-flipped):hover .card__inner {
+    transform: rotateY(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__inner {
+    transition: none;
+  }
+}
