@@ -472,6 +472,14 @@ code {
   place-items: center;
   border-radius: 10px;
   backface-visibility: hidden;
+  /*
+   * backface-visibility is not enough on its own. The card is a <button>, and
+   * Firefox lays button children out in an anonymous box that flattens the 3D
+   * context — so it paints both faces at once and the answer shows through the
+   * prompt. Swapping visibility at the halfway point of the turn needs no 3D
+   * support, so it holds in every engine.
+   */
+  transition: visibility 0s linear 175ms;
 }
 
 /* Front and back set position and colour; --as-* sets type, since either face
@@ -486,6 +494,15 @@ code {
   background: var(--accent-bg);
   color: var(--text-h);
   box-shadow: inset 0 0 0 1px var(--accent-border);
+  visibility: hidden;
+}
+
+.card.is-flipped .card__face--front {
+  visibility: hidden;
+}
+
+.card.is-flipped .card__face--back {
+  visibility: visible;
 }
 
 .card__as-kana {
@@ -551,6 +568,11 @@ code {
 
 @media (prefers-reduced-motion: reduce) {
   .card__inner {
+    transition: none;
+  }
+
+  /* No turn to hide behind, so swap the faces immediately. */
+  .card__face {
     transition: none;
   }
 }
