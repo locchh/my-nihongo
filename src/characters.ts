@@ -117,13 +117,18 @@ const markup = (): string => `
   </section>`
 
 /**
- * Flip-card practice in both directions. Each character holds both kana forms;
- * only the selected script is ever shown, so the prompt stays a single shape.
+ * The characters, as flip cards in both directions. Each entry holds both kana
+ * forms; only the selected script is ever shown, so the prompt stays a single
+ * shape.
+ *
+ * Named for what it drills rather than for the drilling. Words and phrases are
+ * practice too, and this is the rung below them: characters, then words, then
+ * phrases.
  */
 /** Must match the .is-turning transition in style.css. */
 const TURN_MS = 160
 
-export const renderPractice = (mount: HTMLElement): void => {
+export const renderCharacters = (mount: HTMLElement): void => {
   const paint = () => {
     mount.innerHTML = markup()
   }

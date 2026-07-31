@@ -1,8 +1,9 @@
 import './style.css'
+import { renderCharacters } from './characters.ts'
 import { renderChart } from './chart.ts'
 import { renderHome } from './home.ts'
-import { renderPractice } from './practice.ts'
 import { renderSentences } from './sentences.ts'
+import { renderTest } from './test.ts'
 import { renderWords } from './words.ts'
 import { SECTIONS } from './types.ts'
 import type { BoardId } from './types.ts'
@@ -13,9 +14,10 @@ const MOUNT: Record<BoardId, (board: HTMLElement) => void> = {
   chart: (board) => {
     board.innerHTML = renderChart()
   },
-  practice: renderPractice,
+  characters: renderCharacters,
   words: renderWords,
   sentences: renderSentences,
+  test: renderTest,
 }
 
 const app = document.querySelector<HTMLDivElement>('#app')!

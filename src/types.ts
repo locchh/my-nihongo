@@ -1,22 +1,22 @@
 export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
-export type BoardId = 'home' | 'chart' | 'practice' | 'words' | 'sentences'
+export type BoardId = 'home' | 'chart' | 'characters' | 'words' | 'sentences' | 'test'
 
 /** Time of day the homepage is painted in. Three, not a smooth cycle. */
 export type Phase = 'morning' | 'afternoon' | 'night'
 
 /**
- * The three places to go, in menu order. `id` is missing while a section is
- * still unbuilt: the menu lists it so the shape of the app is visible, but
- * there is nothing to open, and nothing in the markup pretends otherwise.
+ * Everywhere you can go, in menu order. A section without an `id` is one that
+ * is listed but not built: the menu shows it so the shape of the app is
+ * visible, and nothing in the markup pretends it opens.
  */
 export const SECTIONS: { id?: BoardId; label: string; ja: string }[] = [
   { id: 'chart', label: 'Full board', ja: '五十音' },
-  { id: 'practice', label: 'Practice', ja: '練習' },
+  { id: 'characters', label: 'Characters', ja: '文字' },
   { id: 'words', label: 'Words', ja: '単語' },
   { id: 'sentences', label: 'Phrases', ja: '会話' },
-  { label: 'Test', ja: '試験' },
+  { id: 'test', label: 'Test', ja: '試験' },
 ]
 
 export interface Kana {
