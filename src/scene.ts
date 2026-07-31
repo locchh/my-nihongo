@@ -88,12 +88,28 @@ const SNOW_SHADE =
   'L 866 288 L 850 254 L 832 322 L 815 262 L 797 348 L 780 270 L 762 378 L 744 268 ' +
   'L 726 336 L 712 260 L 714 140 Z'
 
+/**
+ * How much of the summit is cut away, in art units.
+ *
+ * Cropping the viewBox rather than letting the container do it is what makes
+ * the truncation constant. Left to `slice`, how much is hidden depends on the
+ * shape of the window: a wide one is scaled by its width and loses a lot off
+ * the top, while a tall narrow one is scaled by its height and loses nothing
+ * at all — so the peak appeared and disappeared as the window changed. Taking
+ * it out of the coordinate system hides it at every size.
+ *
+ * It pairs with the height of `.fuji`: the two are set so the cropped box and
+ * the container share an aspect ratio, which is what stops `slice` adding a
+ * second, window-dependent crop on top of this one.
+ */
+const HIDE_SUMMIT = 127
+
 /** Two birds in the distance, off to the east. */
 const FAR_BIRDS = 'M 950 70 q 9 -11 18 0 q 9 -11 18 0 M 1050 38 q 8 -10 16 0 q 8 -10 16 0'
 
 const mountain = (): string => `
   <div class="fuji">
-    <svg viewBox="0 0 1440 660" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <svg viewBox="0 ${HIDE_SUMMIT} 1440 ${660 - HIDE_SUMMIT}" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <defs>
         <linearGradient id="fuji-body" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" class="fuji-body-top"/>

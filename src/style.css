@@ -496,7 +496,12 @@ code {
 .fuji {
   position: absolute;
   inset: auto 0 0;
-  height: 62%;
+  /* Matched to the cropped viewBox in scene.ts: 1440 / (660 - 127) is 2.7, and
+     at 37vw the container has that same ratio. Because they agree, `slice`
+     never adds a crop of its own, so the peak is cut in exactly the same place
+     at every window size — left to itself the crop followed the shape of the
+     window, and the summit slid in and out of view as it changed. */
+  height: 37vw;
   overflow: hidden;
 
   & svg {
