@@ -99,3 +99,13 @@ export interface Sentence {
   note: string
   learned: boolean
 }
+
+/**
+ * A heading for a group of phrases. Lives in data so a new one is a new entry
+ * in topics.json rather than a code change.
+ */
+export interface Topic {
+  id: string
+  title: string
+  ja: string
+}

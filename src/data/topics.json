@@ -1,0 +1,7 @@
+[
+  { "id": "greeting", "title": "Greetings", "ja": "あいさつ" },
+  { "id": "introduction", "title": "Introductions", "ja": "じこしょうかい" },
+  { "id": "wellbeing", "title": "How are you", "ja": "ごきげん" },
+  { "id": "courtesy", "title": "Thanks and sorry", "ja": "れいぎ" },
+  { "id": "farewell", "title": "Leaving", "ja": "わかれ" }
+]

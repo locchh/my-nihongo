@@ -1,6 +1,7 @@
 import sentenceData from './data/sentences.json'
+import topicData from './data/topics.json'
 import { makeDeck } from './deck.ts'
-import type { Register, Sentence } from './types.ts'
+import type { Register, Sentence, Topic } from './types.ts'
 
 const sentences = sentenceData as Sentence[]
 
@@ -21,14 +22,28 @@ const sentences = sentenceData as Sentence[]
 
 const HAND = 3
 
-const TOPICS: { id: string; title: string; ja: string }[] = [
-  { id: 'all', title: 'Everything', ja: 'ぜんぶ' },
-  { id: 'greeting', title: 'Greetings', ja: 'あいさつ' },
-  { id: 'introduction', title: 'Introductions', ja: 'じこしょうかい' },
-  { id: 'wellbeing', title: 'How are you', ja: 'ごきげん' },
-  { id: 'courtesy', title: 'Thanks and sorry', ja: 'れいぎ' },
-  { id: 'farewell', title: 'Leaving', ja: 'わかれ' },
-]
+/**
+ * The filter chips: "everything", then the topics from the data.
+ *
+ * A topic the phrases use but topics.json has never heard of still gets a
+ * chip, labelled with its own id. That is deliberate — the alternative is a
+ * phrase that quietly does not appear on the board because of a typo in one
+ * field, which is a bad way to find out. An ugly label is easy to notice and
+ * easy to fix; a missing phrase is neither.
+ */
+const TOPICS: Topic[] = (() => {
+  const named = topicData as Topic[]
+  const used = [...new Set(sentences.map((s) => s.topic))]
+  const unnamed = used
+    .filter((id) => !named.some((t) => t.id === id))
+    .map((id) => ({ id, title: id, ja: id }))
+  return [
+    { id: 'all', title: 'Everything', ja: 'ぜんぶ' },
+    // Only topics that have something in them; an empty chip is a dead end.
+    ...named.filter((t) => used.includes(t.id)),
+    ...unnamed,
+  ]
+})()
 
 const REGISTER: Record<Register, string> = {
   casual: 'casual',
