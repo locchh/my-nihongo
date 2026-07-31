@@ -909,15 +909,41 @@ code {
 .tabs,
 .toggle {
   display: inline-flex;
-  /* A safety net only: the narrow-screen rules below shorten the labels so the
-     row fits, and a wrapped pill strands one tab on a second line. */
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
   gap: 4px;
   padding: 4px;
   border: 1px solid var(--border);
   border-radius: 999px;
+}
+
+/*
+ * Past five or six sections the labels cannot shrink any further and a wrapped
+ * pill strands a tab on a line of its own, so the strip scrolls instead. The
+ * pill loses its outline here — a rounded border round a scrolling row reads
+ * as a clipped box rather than a container.
+ */
+@media (max-width: 640px) {
+  .tabs {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border: 0;
+    border-radius: 0;
+    padding: 2px 0;
+    width: 100%;
+    max-width: 100%;
+    scroll-padding-inline: 8px;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabs__btn {
+    flex: none;
+  }
 }
 
 .tabs__btn,
@@ -932,9 +958,9 @@ code {
   padding: 6px 18px;
   cursor: pointer;
 
-  @media (max-width: 560px) {
+  @media (max-width: 640px) {
     font-size: 14px;
-    padding: 6px 9px;
+    padding: 6px 10px;
   }
 
   &.is-active {
@@ -1152,6 +1178,119 @@ code {
   font-size: clamp(0.9rem, 3.4vw, 1.15rem);
 }
 
+/* ---------- phrases ---------- */
+
+.phrases {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+/* A row, not a card: a phrase is long, and the reading and the sense unfold
+   underneath it rather than on a second face. */
+.phrase {
+  font: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  text-align: left;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  &.is-open {
+    background: var(--accent-bg);
+    border-color: var(--accent-border);
+  }
+}
+
+.phrase--learned {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.phrase__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.phrase__ja {
+  font-size: clamp(1.05rem, 3.6vw, 1.3rem);
+  line-height: 1.5;
+}
+
+.phrase__tag {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* Register is the thing most easily got wrong, so it is colour-coded rather
+   than left as another line of grey text. */
+.phrase__tag--casual {
+  border-color: hsl(150 45% 70%);
+  color: hsl(150 40% 30%);
+}
+.phrase__tag--polite {
+  border-color: hsl(205 55% 72%);
+  color: hsl(205 50% 34%);
+}
+
+.phrase__answer {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.phrase.is-open .phrase__answer {
+  display: flex;
+}
+
+.phrase__romaji {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.phrase__en {
+  font-size: 15px;
+  color: var(--text-h);
+}
+
+.phrase__note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 4px;
+  padding-left: 10px;
+  border-left: 2px solid var(--accent-border);
+}
+
 /* ---------- word flashcards ---------- */
 
 /* Three at a time, always three across, and given room to be read: a word
@@ -1249,6 +1388,30 @@ code {
   }
   & .card__as-word {
     font-size: clamp(0.95rem, 3.4vw, 1.3rem);
+  }
+}
+
+/*
+ * Topics are separate chips rather than segments of one control. Six of them
+ * cannot hold a single line at every width, and inside a shared pill the one
+ * that wraps looks stranded in a box that is suddenly the wrong shape. Given
+ * their own outlines they simply flow onto the next line, which is what a set
+ * of filters should do.
+ */
+.toggle--chips {
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  max-width: min(46rem, 100%);
+
+  & .toggle__btn {
+    border: 1px solid var(--border);
+
+    &.is-active {
+      border-color: var(--accent-border);
+    }
   }
 }
 

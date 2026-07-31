@@ -1,5 +1,6 @@
 import kanaData from './data/kana.json'
 import wordData from './data/words.json'
+import { makeDeck } from './deck.ts'
 import { ROW_HUE } from './types.ts'
 import type { Kana, Word } from './types.ts'
 
@@ -35,47 +36,11 @@ const FACES: Face[] = ['japanese', 'emoji', 'romaji']
 /** How many cards are on the table at once. */
 const HAND = 3
 
-/**
- * Cards come off a shuffled deck rather than being picked independently at
- * random, and that is the whole difference between a deck that covers itself
- * and one that does not.
- *
- * Picking three at random every time looks fair and is not: with a thousand
- * words, three hundred draws would land on roughly six hundred distinct cards
- * and hammer some of them a dozen times over, because nothing stops a card
- * being chosen again immediately. Dealing off a shuffled deck instead means
- * every card is seen once before any card is seen twice — three hundred draws
- * gives nine hundred different words, and the deck only reshuffles when it has
- * run out.
- */
-let deck: Word[] = []
+const deck = makeDeck<Word>()
 let hand: { word: Word; face: Face }[] = []
 
-/** Fisher-Yates, so every ordering of the deck is equally likely. */
-const shuffled = (xs: Word[]): Word[] => {
-  const out = [...xs]
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[out[i], out[j]] = [out[j], out[i]]
-  }
-  return out
-}
-
 const deal = (): void => {
-  const size = Math.min(HAND, words.length)
-  const picked: Word[] = []
-  while (picked.length < size) {
-    if (!deck.length) deck = shuffled(words)
-    const next = deck.pop()!
-    if (picked.includes(next)) {
-      // The deck ran dry mid-deal and this card has come straight back round.
-      // Send it to the bottom rather than showing it twice in one hand.
-      deck.unshift(next)
-      continue
-    }
-    picked.push(next)
-  }
-  hand = picked.map((word) => ({
+  hand = deck.deal(words, HAND).map((word) => ({
     word,
     face: FACES[Math.floor(Math.random() * FACES.length)],
   }))
@@ -147,7 +112,7 @@ const markup = (): string => {
       <div class="controls controls--after">
         <button class="btn-deal" type="button" data-deal>Next three</button>
         <p class="deal__left">
-          ${deck.length} left before the deck reshuffles
+          ${deck.left()} left before the deck reshuffles
         </p>
       </div>
     </section>`

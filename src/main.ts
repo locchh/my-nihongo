@@ -2,6 +2,7 @@ import './style.css'
 import { renderChart } from './chart.ts'
 import { renderHome } from './home.ts'
 import { renderPractice } from './practice.ts'
+import { renderSentences } from './sentences.ts'
 import { renderWords } from './words.ts'
 import { SECTIONS } from './types.ts'
 import type { BoardId } from './types.ts'
@@ -14,6 +15,7 @@ const MOUNT: Record<BoardId, (board: HTMLElement) => void> = {
   },
   practice: renderPractice,
   words: renderWords,
+  sentences: renderSentences,
 }
 
 const app = document.querySelector<HTMLDivElement>('#app')!
@@ -54,6 +56,9 @@ const header = (): string =>
 const show = () => {
   app.innerHTML = `${header()}<main id="board"></main>`
   MOUNT[current](document.querySelector<HTMLElement>('#board')!)
+  // On a phone the tab strip scrolls, and the tab you just arrived on can be
+  // off to the right where you cannot see that it is selected.
+  app.querySelector('.tabs__btn.is-active')?.scrollIntoView({ block: 'nearest', inline: 'center' })
 }
 
 // Delegated, so the title screen's menu needs no wiring of its own: its

@@ -1,7 +1,7 @@
 export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
-export type BoardId = 'home' | 'chart' | 'practice' | 'words'
+export type BoardId = 'home' | 'chart' | 'practice' | 'words' | 'sentences'
 
 /** Time of day the homepage is painted in. Three, not a smooth cycle. */
 export type Phase = 'morning' | 'afternoon' | 'night'
@@ -15,6 +15,7 @@ export const SECTIONS: { id?: BoardId; label: string; ja: string }[] = [
   { id: 'chart', label: 'Full board', ja: '五十音' },
   { id: 'practice', label: 'Practice', ja: '練習' },
   { id: 'words', label: 'Words', ja: '単語' },
+  { id: 'sentences', label: 'Phrases', ja: '会話' },
   { label: 'Test', ja: '試験' },
 ]
 
@@ -75,5 +76,26 @@ export interface Word {
   emoji: string
   gloss: string
   script: Script
+  learned: boolean
+}
+
+/** How formal a phrase is. Saying やあ to a stranger is its own kind of error. */
+export type Register = 'casual' | 'neutral' | 'polite'
+
+/**
+ * A set phrase, filed under the situation it belongs to.
+ *
+ * Written in kana without kanji, like everything else here. Real Japanese
+ * would spell おげんきですか as お元気ですか, but a reader who cannot yet read
+ * kana gains nothing from the kanji and loses the chance to practise.
+ */
+export interface Sentence {
+  japanese: string
+  romaji: string
+  english: string
+  topic: string
+  register: Register
+  /** Why it is said this way, when that is not obvious. Empty when it is. */
+  note: string
   learned: boolean
 }

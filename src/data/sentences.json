@@ -1,0 +1,191 @@
+[
+  {
+    "japanese": "おはよう",
+    "romaji": "ohayou",
+    "english": "morning",
+    "topic": "greeting",
+    "register": "casual",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "おはようございます",
+    "romaji": "ohayou gozaimasu",
+    "english": "good morning",
+    "topic": "greeting",
+    "register": "polite",
+    "note": "ございます is what makes it polite — it turns up on the end of a lot of set phrases",
+    "learned": false
+  },
+  {
+    "japanese": "こんにちは",
+    "romaji": "konnichiwa",
+    "english": "hello",
+    "topic": "greeting",
+    "register": "neutral",
+    "note": "written は but read wa — it is the topic particle, left over from a longer sentence",
+    "learned": false
+  },
+  {
+    "japanese": "こんばんは",
+    "romaji": "konbanwa",
+    "english": "good evening",
+    "topic": "greeting",
+    "register": "neutral",
+    "note": "は is read wa here too, for the same reason",
+    "learned": false
+  },
+  {
+    "japanese": "やあ",
+    "romaji": "yaa",
+    "english": "hi",
+    "topic": "greeting",
+    "register": "casual",
+    "note": "friends only",
+    "learned": false
+  },
+  {
+    "japanese": "はじめまして",
+    "romaji": "hajimemashite",
+    "english": "nice to meet you",
+    "topic": "introduction",
+    "register": "neutral",
+    "note": "literally 'for the first time' — only ever said once to a given person",
+    "learned": false
+  },
+  {
+    "japanese": "わたしは〜です",
+    "romaji": "watashi wa ~ desu",
+    "english": "I am ~",
+    "topic": "introduction",
+    "register": "polite",
+    "note": "put your name where the 〜 is",
+    "learned": false
+  },
+  {
+    "japanese": "おなまえは",
+    "romaji": "onamae wa",
+    "english": "what is your name?",
+    "topic": "introduction",
+    "register": "polite",
+    "note": "the question is left unfinished on purpose; finishing it sounds blunt",
+    "learned": false
+  },
+  {
+    "japanese": "よろしくおねがいします",
+    "romaji": "yoroshiku onegaishimasu",
+    "english": "pleased to meet you",
+    "topic": "introduction",
+    "register": "polite",
+    "note": "no English equivalent — roughly 'please treat me favourably'. Closes an introduction",
+    "learned": false
+  },
+  {
+    "japanese": "おげんきですか",
+    "romaji": "ogenki desu ka",
+    "english": "how are you?",
+    "topic": "wellbeing",
+    "register": "polite",
+    "note": "か marks a question. Asked of someone you have not seen in a while, not daily",
+    "learned": false
+  },
+  {
+    "japanese": "げんきです",
+    "romaji": "genki desu",
+    "english": "I am well",
+    "topic": "wellbeing",
+    "register": "polite",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "まあまあです",
+    "romaji": "maa maa desu",
+    "english": "so-so",
+    "topic": "wellbeing",
+    "register": "neutral",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "ありがとう",
+    "romaji": "arigatou",
+    "english": "thanks",
+    "topic": "courtesy",
+    "register": "casual",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "ありがとうございます",
+    "romaji": "arigatou gozaimasu",
+    "english": "thank you",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "どういたしまして",
+    "romaji": "dou itashimashite",
+    "english": "you are welcome",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "すみません",
+    "romaji": "sumimasen",
+    "english": "excuse me / sorry",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "does three jobs: apology, getting attention, and a modest sort of thank you",
+    "learned": false
+  },
+  {
+    "japanese": "ごめんなさい",
+    "romaji": "gomen nasai",
+    "english": "I am sorry",
+    "topic": "courtesy",
+    "register": "neutral",
+    "note": "a real apology, where すみません can be a passing one",
+    "learned": false
+  },
+  {
+    "japanese": "さようなら",
+    "romaji": "sayounara",
+    "english": "goodbye",
+    "topic": "farewell",
+    "register": "neutral",
+    "note": "carries a sense of parting for a long while — not what you say leaving the office",
+    "learned": false
+  },
+  {
+    "japanese": "またね",
+    "romaji": "mata ne",
+    "english": "see you",
+    "topic": "farewell",
+    "register": "casual",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "じゃあね",
+    "romaji": "jaa ne",
+    "english": "bye",
+    "topic": "farewell",
+    "register": "casual",
+    "note": "",
+    "learned": false
+  },
+  {
+    "japanese": "おやすみなさい",
+    "romaji": "oyasuminasai",
+    "english": "good night",
+    "topic": "farewell",
+    "register": "polite",
+    "note": "said on parting for the night, or going to bed",
+    "learned": false
+  }
+]
