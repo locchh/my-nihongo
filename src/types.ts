@@ -1,7 +1,7 @@
 export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
-export type BoardId = 'home' | 'chart' | 'practice'
+export type BoardId = 'home' | 'chart' | 'practice' | 'words'
 
 /** Time of day the homepage is painted in. Three, not a smooth cycle. */
 export type Phase = 'morning' | 'afternoon' | 'night'
@@ -14,6 +14,7 @@ export type Phase = 'morning' | 'afternoon' | 'night'
 export const SECTIONS: { id?: BoardId; label: string; ja: string }[] = [
   { id: 'chart', label: 'Full board', ja: '五十音' },
   { id: 'practice', label: 'Practice', ja: '練習' },
+  { id: 'words', label: 'Words', ja: '単語' },
   { label: 'Test', ja: '試験' },
 ]
 
@@ -53,3 +54,26 @@ export const ROW_HUE: Record<string, number> = {
 
 export const learnedIn = (k: Kana, script: Script): boolean =>
   script === 'hiragana' ? k.learnedHiragana : k.learnedKatakana
+
+/**
+ * A word worth knowing, as one flashcard.
+ *
+ * Unlike a kana, a word has one written form and not two: native words are
+ * written in hiragana and borrowed ones in katakana, and that is a property of
+ * the word rather than a choice the reader makes. `script` records which,
+ * because the two are read differently even when a word could be spelled
+ * either way.
+ *
+ * `emoji` is the meaning. It is deliberately not an English word: the point of
+ * the deck is a direct hop from the Japanese to the thing, with no English in
+ * between to translate through. `gloss` exists so screen readers and search
+ * have something to say, and never appears on the card.
+ */
+export interface Word {
+  japanese: string
+  romaji: string
+  emoji: string
+  gloss: string
+  script: Script
+  learned: boolean
+}

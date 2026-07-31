@@ -934,7 +934,7 @@ code {
 
   @media (max-width: 560px) {
     font-size: 14px;
-    padding: 6px 11px;
+    padding: 6px 9px;
   }
 
   &.is-active {
@@ -1105,8 +1105,9 @@ code {
 .card__face {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   backface-visibility: hidden;
   /*
@@ -1149,6 +1150,146 @@ code {
 .card__as-romaji {
   font-family: var(--mono);
   font-size: clamp(0.9rem, 3.4vw, 1.15rem);
+}
+
+/* ---------- word flashcards ---------- */
+
+/* Three at a time, always three across, and given room to be read: a word
+   needs more than a single kana does, and the answer face carries an emoji and
+   a reading stacked together. */
+.cards--words {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 2.4vw, 20px);
+  place-content: center;
+  max-width: 32rem;
+  margin-inline: auto;
+  /* Room for the shadow, which a grid otherwise clips against its own edge. */
+  padding: 6px 6px 14px;
+}
+
+/*
+ * Made to look like a card you could pick up: portrait, paper white, rounded,
+ * and lifted off the page by a shadow. The row's hue survives as a band across
+ * the top rather than flooding the whole face — enough to tie the word to its
+ * place on the chart, without turning the deck into swatches.
+ */
+.card--word {
+  aspect-ratio: 3 / 4;
+
+  & .card__face {
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 14px;
+    background: var(--bg);
+    color: var(--text-h);
+    box-shadow:
+      inset 0 6px 0 var(--cell-bg),
+      inset 0 0 0 1px var(--border),
+      0 1px 2px rgb(22 16 32 / 0.06),
+      0 10px 22px -8px rgb(22 16 32 / 0.28);
+  }
+
+  & .card__face--back {
+    box-shadow:
+      inset 0 6px 0 var(--accent),
+      inset 0 0 0 1px var(--accent-border),
+      0 1px 2px rgb(22 16 32 / 0.06),
+      0 10px 22px -8px rgb(22 16 32 / 0.28);
+  }
+}
+
+/* The learned ring has to sit outside the card's own rim, or the two fight. */
+.card--word.card--learned .card__face {
+  box-shadow:
+    inset 0 6px 0 var(--cell-bg),
+    inset 0 0 0 2.5px var(--accent),
+    0 10px 22px -8px rgb(22 16 32 / 0.28);
+}
+
+.card__as-word {
+  font-size: clamp(1.15rem, 4.4vw, 1.7rem);
+  line-height: 1.3;
+  /* Long words shrink rather than spill over the edge of the card. */
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.card__emoji {
+  font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.card__reading {
+  font-family: var(--mono);
+  font-size: clamp(0.72rem, 2.6vw, 0.9rem);
+  opacity: 0.75;
+}
+
+/* As a prompt, each of the three stands alone and gets the room to. The
+   reading in particular is sized as a footnote on the answer face, which is
+   far too quiet when it is the question being asked. */
+.card--word .card__face--front {
+  & .card__reading {
+    font-size: clamp(1.05rem, 4vw, 1.5rem);
+    opacity: 1;
+  }
+  & .card__emoji {
+    font-size: clamp(2rem, 7.5vw, 2.8rem);
+  }
+}
+
+/* The answer face carries all three at once, so each gives up a little size to
+   fit beside the others. */
+.card__face--all {
+  gap: 2px;
+
+  & .card__emoji {
+    font-size: clamp(1.3rem, 4.8vw, 1.75rem);
+  }
+  & .card__as-word {
+    font-size: clamp(0.95rem, 3.4vw, 1.3rem);
+  }
+}
+
+/* A lone control still reads as one of the pills, without a group around it. */
+/* The deal sits under the cards, where the eye lands after reading them. */
+.controls--after {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.btn-deal {
+  font: inherit;
+  font-size: 15px;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  padding: 10px 26px;
+  cursor: pointer;
+  transition: background 200ms ease;
+
+  &:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+.deal__left {
+  font-family: var(--mono);
+  font-size: 12px;
+  /* Full strength, not a faded --text: at 12px the dimmed version came out at
+     3:1 against the page and failed contrast. */
+  color: var(--text);
 }
 
 .card__also {

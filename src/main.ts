@@ -2,6 +2,7 @@ import './style.css'
 import { renderChart } from './chart.ts'
 import { renderHome } from './home.ts'
 import { renderPractice } from './practice.ts'
+import { renderWords } from './words.ts'
 import { SECTIONS } from './types.ts'
 import type { BoardId } from './types.ts'
 
@@ -12,6 +13,7 @@ const MOUNT: Record<BoardId, (board: HTMLElement) => void> = {
     board.innerHTML = renderChart()
   },
   practice: renderPractice,
+  words: renderWords,
 }
 
 const app = document.querySelector<HTMLDivElement>('#app')!
@@ -19,8 +21,10 @@ let current: BoardId = 'home'
 
 /**
  * Each tab carries both names. On a phone the English is hidden and the kanji
- * stand alone — four English labels do not fit a 320px screen, and wrapping
- * them strands one tab on a second row inside the pill.
+ * stand alone — five English labels do not fit a 320px screen, and wrapping
+ * them strands one tab on a second row inside the pill. Home shortens all the
+ * way to 家 there, since it is the one label with no kanji form of its own and
+ * ホーム costs four characters to say nothing extra.
  */
 const tab = (id: BoardId | undefined, label: string, ja: string): string => {
   const inner = `<span class="tabs__ja" lang="ja">${ja}</span><span class="tabs__en">${label}</span>`
@@ -42,7 +46,7 @@ const header = (): string =>
     : `<header class="site">
          <h1 class="site__title" lang="ja">あ <span>my-nihongo</span></h1>
          <nav class="tabs">
-           ${tab('home', 'Home', 'ホーム')}
+           ${tab('home', 'Home', '家')}
            ${SECTIONS.map((s) => tab(s.id, s.label, s.ja)).join('')}
          </nav>
        </header>`
