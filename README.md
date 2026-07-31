@@ -21,7 +21,10 @@ Three rules follow from that, and they shape every screen here:
    *ka* → か is production, and it is writing and typing. Recognition can coast
    on vague visual memory; production cannot, which makes it the honest test.
 
-The target is a direct reflex from shape to sound, with nothing in between.
+The target is a reflex that runs both ways with no romaji in the middle of it:
+shape to sound when you read, sound to shape when you write. Further on the
+same thing happens a level up — こんにちは should arrive as a greeting, not as
+*konnichiwa* and then a greeting.
 
 Background on the writing system — why there are four scripts, where kana came
 from, and what romaji loses — is in [docs/OVERVIEW.md](docs/OVERVIEW.md).
