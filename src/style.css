@@ -35,6 +35,19 @@
 
 body {
   margin: 0;
+  /* The homepage breaks out of #app to the window width. `clip` trims the
+     overhang without turning the body into a scroll container. */
+  overflow-x: clip;
+}
+
+/* Whatever the header leaves, the board gets — which is what lets the homepage
+   fill the screen exactly. Flex rather than `height: 100%`, because #app is
+   sized by min-height and a percentage has nothing definite to resolve to. */
+#board {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -278,6 +291,587 @@ code {
   }
 }
 
+/* ---------- home ---------- */
+
+/*
+ * Three palettes for one picture. Every colour in the scene resolves through
+ * these, so the whole homepage changes hour by hour without a shape being
+ * redrawn — `data-phase` on the section is the only thing that moves.
+ *
+ * This is scoped artwork and does not reopen the light-only decision above:
+ * the boards stay light at every hour, because their pastel row bands are the
+ * information.
+ */
+.home {
+  --sky-top: #7e9ac2;
+  --sky-mid: #8ba6cb;
+  --sky-low: #9db6d5;
+  --sun: #e2697b;
+  --sun-deep: #6d2436;
+  --sun-size: min(84vmin, 720px);
+  --sun-top: 46%;
+  --sun-left: 50%;
+  --cloud: #f4f7fb;
+  --cloud-dim: 0.85;
+  --body-top: #33436a;
+  --body-bottom: #1a2544;
+  --snow: #ffffff;
+  --snow-shade: #d9dfe9;
+  --bough: #4a3229;
+  --bough-lit: #5f4434;
+  --twig: #54392c;
+  --twig-lit: #5c4133;
+  --petal-a: #fbd9e1;
+  --petal-b: #f0a9bd;
+  --blossom-a: #fce3e9;
+  --blossom-b: #f5b6c6;
+  --blossom-eye: #fff4f0;
+  --ink: #f3f6fb;
+  --ink-dim: #cfdcec;
+  /* The picks carry their own dark plate, so their text is light at every
+     hour. The title and greeting sit on open sky, which is not — at dawn the
+     sky goes pale and light-on-light stops being readable. */
+  --pick-ink: #f3f6fb;
+  --pick-ink-dim: #cfdcec;
+  --ink-shadow: rgb(10 18 34 / 0.5);
+  --pick-bg: rgb(10 19 38 / 0.52);
+  --pick-edge: rgb(255 255 255 / 0.3);
+  --say-bg: #fffaf2;
+  --say-ink: #3a3040;
+
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  /* A floor for the scene, but never taller than the screen — on a phone held
+     sideways a fixed 560px pushed the menu below the fold. */
+  min-height: min(560px, 100svh);
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 45%, var(--sky-low) 100%);
+  font-family: 'Zen Kaku Gothic New', var(--sans);
+  text-align: left;
+}
+
+.home[data-phase='morning'] {
+  --sky-top: #5f97d4;
+  --sky-mid: #8fbde4;
+  --sky-low: #c9e1f2;
+  --sun: #fff2c0;
+  --sun-deep: #efb75c;
+  --sun-size: min(30vmin, 240px);
+  --sun-top: 17%;
+  --sun-left: 19%;
+  --cloud: #ffffff;
+  --cloud-dim: 0.92;
+  --body-top: #4a6191;
+  --body-bottom: #2b3c6b;
+  --snow: #ffffff;
+  --snow-shade: #dde6f2;
+}
+
+.home[data-phase='afternoon'] {
+  --sky-top: #48376f;
+  --sky-mid: #8c4a78;
+  --sky-low: #d96a55;
+  --sun: #e2697b;
+  --sun-deep: #6d2436;
+  --sun-size: min(84vmin, 720px);
+  --sun-top: 46%;
+  --sun-left: 50%;
+  --cloud: #f0ac9d;
+  --cloud-dim: 0.5;
+  --body-top: #3b2a54;
+  --body-bottom: #1d1330;
+  --snow: #ffe6da;
+  --snow-shade: #d5a094;
+  --blossom-a: #ffd9df;
+  --blossom-b: #ec8fa6;
+  --petal-a: #ffd2dc;
+  --petal-b: #e08ba0;
+}
+
+.home[data-phase='night'] {
+  --sky-top: #0f1830;
+  --sky-mid: #1b2746;
+  --sky-low: #2c3b5e;
+  --sun: #f4ecd6;
+  --sun-deep: #9a9ab6;
+  --sun-size: min(24vmin, 190px);
+  --sun-top: 15%;
+  --sun-left: 79%;
+  --cloud: #46557a;
+  --cloud-dim: 0.5;
+  --body-top: #1a2440;
+  --body-bottom: #0d1428;
+  --snow: #cdd6e8;
+  --snow-shade: #9aa5c2;
+  --say-bg: #eef1fa;
+  --say-ink: #2a3050;
+  --bough: #2c2029;
+  --bough-lit: #3b2b33;
+  --twig: #33242c;
+  --twig-lit: #3f2e36;
+  --blossom-a: #e8c6d4;
+  --blossom-b: #cf93aa;
+  --petal-a: #e2bccb;
+  --petal-b: #c48fa5;
+}
+
+/* The scene's own colours crossfade; the petals must not be caught by this or
+   every phase change would visibly retime them. */
+.home .sun,
+.home .cloud path,
+.home .fuji path,
+.home .branch path,
+.home .blossom__petal {
+  transition:
+    fill 900ms ease,
+    background 900ms ease,
+    opacity 900ms ease;
+}
+
+/* ---------- sky ---------- */
+
+.sun {
+  position: absolute;
+  top: var(--sun-top);
+  left: var(--sun-left);
+  width: calc(var(--sun-size) * var(--sun-scale, 1));
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition:
+    width 900ms ease,
+    top 900ms ease,
+    left 900ms ease;
+  background: radial-gradient(
+    circle at 50% 38%,
+    var(--sun) 0%,
+    color-mix(in oklab, var(--sun) 78%, var(--sun-deep)) 100%
+  );
+}
+
+.cloud {
+  position: absolute;
+  opacity: var(--cloud-dim);
+
+  & path {
+    fill: var(--cloud);
+  }
+}
+
+.cloud--a {
+  top: 25%;
+  left: -4%;
+  width: 38%;
+  animation: cloud-drift 34s ease-in-out infinite alternate;
+}
+.cloud--b {
+  top: 35%;
+  left: 13%;
+  width: 20%;
+  opacity: calc(var(--cloud-dim) * 0.7);
+  animation: cloud-drift 46s ease-in-out infinite alternate-reverse;
+}
+.cloud--c {
+  top: 43%;
+  right: -3%;
+  width: 30%;
+  opacity: calc(var(--cloud-dim) * 0.88);
+  animation: cloud-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes cloud-drift {
+  from {
+    transform: translateX(-8%);
+  }
+  to {
+    transform: translateX(8%);
+  }
+}
+
+/* ---------- the mountain ---------- */
+
+.fuji {
+  position: absolute;
+  inset: auto 0 0;
+  height: 62%;
+  overflow: hidden;
+
+  & svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.fuji-body-top {
+  stop-color: var(--body-top);
+}
+.fuji-body-bottom {
+  stop-color: var(--body-bottom);
+}
+.fuji-body {
+  fill: url(#fuji-body);
+}
+.fuji-lit {
+  fill: #ffffff;
+  opacity: 0.05;
+}
+.fuji-shade {
+  fill: #0d1830;
+  opacity: 0.3;
+}
+.fuji-snow {
+  fill: var(--snow);
+}
+.fuji-snow-shade {
+  fill: var(--snow-shade);
+  opacity: 0.9;
+}
+.far-birds {
+  fill: none;
+  stroke: var(--snow);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+/* ---------- the branch ---------- */
+
+.branch {
+  position: absolute;
+  top: 2%;
+  left: -4%;
+  width: 54%;
+  max-width: 880px;
+  z-index: 2;
+  transform-origin: 10% 0%;
+  animation: branch-sway 11s ease-in-out infinite;
+  pointer-events: none;
+  /* Bird, blossoms and speech box are all sized against this box, so the whole
+     arrangement scales as one and the clearances between them hold at every
+     window size instead of only the one they were checked at. */
+  container-type: inline-size;
+}
+
+@keyframes branch-sway {
+  0%,
+  100% {
+    transform: rotate(-0.5deg);
+  }
+  50% {
+    transform: rotate(0.7deg);
+  }
+}
+
+/* The bough is drawn descending and flipped into place, which is how a limb
+   sweeps up out of the corner. The bird sits outside the flip. */
+.branch__flip {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62%;
+  transform: scaleY(-1);
+
+  & svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+}
+
+.bough {
+  fill: var(--bough);
+}
+.bough-lit {
+  fill: var(--bough-lit);
+  opacity: 0.7;
+}
+.twig {
+  fill: var(--twig);
+}
+.twig-lit {
+  fill: var(--twig-lit);
+}
+
+.blossom {
+  position: absolute;
+  filter: drop-shadow(0 2px 3px rgb(90 40 60 / 0.15));
+}
+
+/* ---------- what the bird says ---------- */
+
+.say {
+  position: absolute;
+  left: 34%;
+  bottom: 56%;
+  width: 30cqw;
+  padding: 1.4cqw 2cqw;
+  border-radius: 3px;
+  background: var(--say-bg);
+  color: var(--say-ink);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.5) inset,
+    0 6px 18px rgb(20 24 44 / 0.22);
+}
+
+/* The tail, sitting under the box's right end so it points at the bird's
+   head — which is where the box is anchored to sit above. */
+.say::after {
+  content: '';
+  position: absolute;
+  right: 12%;
+  bottom: -1.4cqw;
+  width: 2.8cqw;
+  height: 2.8cqw;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 22% 100%);
+}
+
+.say__ja {
+  font-size: clamp(9px, 2.5cqw, 15px);
+  line-height: 1.35;
+}
+
+.say__en {
+  font-family: var(--mono);
+  font-size: clamp(7px, 1.9cqw, 11px);
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  margin-top: 0.3em;
+}
+
+.blossom__petal {
+  position: absolute;
+  inset: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 40%;
+    height: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, var(--blossom-a), var(--blossom-b));
+    border-radius: 55% 55% 50% 50%;
+  }
+}
+
+.blossom__eye {
+  position: absolute;
+  inset: 36%;
+  border-radius: 50%;
+  background: var(--blossom-eye);
+  box-shadow: 0 0 0 1.5px rgb(214 120 140 / 0.45);
+}
+
+.bird {
+  position: absolute;
+  left: 58%;
+  top: 62.5%;
+  width: 9%;
+  max-width: 84px;
+  transform: translate(-50%, -95%);
+}
+
+/* ---------- petals ---------- */
+
+.petals {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  /* The menu sits under this layer. Without it nothing can be clicked. */
+  pointer-events: none;
+}
+
+/*
+ * Two elements per petal: the outer falls at a constant rate, the inner sways
+ * on its own clock. Folding them into one transform would restart the sway on
+ * every pass, and the drift would come out mechanical.
+ */
+.petal {
+  position: absolute;
+  top: 0;
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.petal__blade {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 60% 0 60% 0;
+  background: linear-gradient(140deg, var(--petal-a), var(--petal-b));
+  animation-name: petal-sway;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* vh, not %: a percentage in `translate` measures the petal, not the sky. */
+@keyframes petal-fall {
+  from {
+    transform: translate3d(0, -12vh, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(6vw, 112vh, 0) rotate(420deg);
+  }
+}
+
+@keyframes petal-sway {
+  0%,
+  100% {
+    margin-left: -1.4vw;
+  }
+  50% {
+    margin-left: 1.8vw;
+  }
+}
+
+/* ---------- the menu ---------- */
+
+.menu {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: clamp(28px, 9vh, 92px);
+  transform: translateX(-50%);
+  width: min(19rem, calc(100vw - 48px));
+  text-align: center;
+  color: var(--ink);
+  /* Everything above the picks is type on open sky, and the sky changes colour
+     three times a day — the shadow is what keeps it readable in all of them. */
+  text-shadow:
+    0 1px 2px var(--ink-shadow),
+    0 2px 22px var(--ink-shadow);
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pick {
+  position: relative;
+  font: inherit;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  color: var(--pick-ink);
+  text-align: left;
+  text-shadow: none;
+  cursor: pointer;
+  border: 1px solid var(--pick-edge);
+  border-radius: 2px;
+  background: var(--pick-bg);
+  backdrop-filter: blur(6px);
+  transition:
+    background 200ms ease,
+    transform 200ms ease,
+    border-color 200ms ease;
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(10 19 38 / 0.68);
+    border-color: rgb(255 255 255 / 0.6);
+    transform: translateY(-2px);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--pick-ink);
+    outline-offset: 3px;
+  }
+}
+
+.pick__ja {
+  font-family: 'Shippori Mincho', var(--heading);
+  font-size: clamp(17px, 3vw, 21px);
+  letter-spacing: 0.06em;
+}
+
+.pick__label {
+  font-family: var(--mono);
+  font-size: clamp(11px, 2vw, 13px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pick-ink-dim);
+}
+
+.pick--soon {
+  cursor: default;
+  opacity: 0.55;
+
+  &:hover {
+    background: var(--pick-bg);
+    border-color: var(--pick-edge);
+    transform: none;
+  }
+  & .pick__soon {
+    position: absolute;
+    right: 14px;
+  }
+}
+
+.pick__soon {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.16);
+}
+
+/* A phone is tall and narrow: the branch has to shrink out of the menu's way,
+   and the mountain needs more of the frame or it reads as a distant smudge. */
+@media (max-aspect-ratio: 3/4) {
+  .home {
+    min-height: 100svh;
+  }
+  .branch {
+    width: 108%;
+    top: 0;
+  }
+  .fuji {
+    height: 46%;
+  }
+  /* vmin is the short edge, so a phase size tuned on a desktop comes out tiny
+     on a phone. Scale it rather than replacing it, or every phase collapses to
+     the same disc. */
+  .home {
+    --sun-scale: 1.45;
+  }
+  .menu {
+    bottom: clamp(24px, 6vh, 56px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal,
+  .petal__blade,
+  .branch,
+  .cloud {
+    animation: none;
+  }
+  .petal {
+    display: none;
+  }
+}
+
 /* ---------- boards ---------- */
 
 /* One hue per gojūon row, set inline as --hue; lightness resolved here. */
@@ -310,6 +904,11 @@ code {
 .tabs,
 .toggle {
   display: inline-flex;
+  /* A safety net only: the narrow-screen rules below shorten the labels so the
+     row fits, and a wrapped pill strands one tab on a second line. */
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
   gap: 4px;
   padding: 4px;
   border: 1px solid var(--border);
@@ -320,6 +919,7 @@ code {
 .toggle__btn {
   font: inherit;
   font-size: 15px;
+  white-space: nowrap;
   color: var(--text);
   background: none;
   border: 0;
@@ -327,10 +927,29 @@ code {
   padding: 6px 18px;
   cursor: pointer;
 
+  @media (max-width: 560px) {
+    font-size: 14px;
+    padding: 6px 11px;
+  }
+
   &.is-active {
     color: var(--text-h);
     background: var(--accent-bg);
     box-shadow: inset 0 0 0 1px var(--accent-border);
+  }
+}
+
+/* Both names live in the tab; which one shows depends on the room there is. */
+.tabs__ja {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .tabs__ja {
+    display: inline;
+  }
+  .tabs__en {
+    display: none;
   }
 }
 
@@ -349,6 +968,11 @@ code {
 .chart__scroll {
   overflow-x: auto;
   padding-bottom: 8px;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
 }
 
 .chart {
@@ -427,6 +1051,14 @@ code {
   font-size: 14px;
   font-weight: 400;
   color: var(--text);
+
+  /* On a narrow screen the note takes a line of its own; beside a heading and
+     a count it has barely a centimetre and reads as a jam of characters. */
+  @media (max-width: 560px) {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 2px;
+  }
 }
 
 .group__count {

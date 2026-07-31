@@ -1,7 +1,21 @@
 export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
-export type BoardId = 'chart' | 'practice'
+export type BoardId = 'home' | 'chart' | 'practice'
+
+/** Time of day the homepage is painted in. Three, not a smooth cycle. */
+export type Phase = 'morning' | 'afternoon' | 'night'
+
+/**
+ * The three places to go, in menu order. `id` is missing while a section is
+ * still unbuilt: the menu lists it so the shape of the app is visible, but
+ * there is nothing to open, and nothing in the markup pretends otherwise.
+ */
+export const SECTIONS: { id?: BoardId; label: string; ja: string }[] = [
+  { id: 'chart', label: 'Full board', ja: '五十音' },
+  { id: 'practice', label: 'Practice', ja: '練習' },
+  { label: 'Test', ja: '試験' },
+]
 
 export interface Kana {
   /** Stable unique key for this character. */

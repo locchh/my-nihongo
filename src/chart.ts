@@ -49,7 +49,10 @@ export const renderChart = (): string => {
         The full gojūon. ゐ and ゑ are shown greyed — they were retired in the
         1946 spelling reform and are not used today.
       </p>
-      <div class="chart__scroll">
+      <!-- The chart is wider than a phone and scrolls sideways. Nothing inside
+           it can take focus, so without a tabindex of its own a keyboard has no
+           way to reach the columns that are off-screen. -->
+      <div class="chart__scroll" tabindex="0" role="group" aria-label="Gojūon chart">
         <div class="chart">${header}${rows}${tail}</div>
       </div>
     </section>`
