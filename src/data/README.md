@@ -4,6 +4,19 @@ Everything the app teaches lives in this folder. Adding material is editing
 JSON — no code, and nothing to register anywhere else. Every board and the test
 pick up new entries on their own.
 
+## The `learned` flags are the syllabus
+
+`learned` on a word, and `learnedHiragana` / `learnedKatakana` on a character,
+are not only decoration. They decide what the Flashcards board deals: the
+character deck draws from what is marked in either kana, the word deck from
+what is marked, and a character is only ever *asked* in a kana you have marked
+— being shown ア before you have met it is a riddle rather than a question.
+
+Mark nothing and the deck falls back to dealing everything, so a fresh checkout
+still works. The board says which of the two it is doing.
+
+The wall chart and the test are unaffected: both always cover the lot.
+
 ## words.json — the Words cards, and word questions in the test
 
 ```json
@@ -68,11 +81,12 @@ gains nothing from the kanji and loses the practice.
 A topic with no phrases in it is not shown, so adding one here first is
 harmless.
 
-## kana.json — the wall chart and the Characters cards
+## kana.json — the wall chart, the character flashcards, and the test
 
 The gojūon, and unlikely to need changing: it is a closed set. `learnedHiragana`
-and `learnedKatakana` drive the ring that marks what you already know, and are
-the two fields worth editing as you go.
+and `learnedKatakana` drive the ring that marks what you already know and the
+flashcard deck above, and are the two fields worth editing as you go. On a
+flashcard the ring means both kana, since the card can ask in either.
 
 `obsolete` marks ゐ and ゑ, retired in the 1946 reform. They appear greyed on
 the chart and are left out of the cards and the test.

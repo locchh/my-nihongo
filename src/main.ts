@@ -1,10 +1,10 @@
 import './style.css'
+import { renderCards } from './cards.ts'
 import { renderCharacters } from './characters.ts'
 import { renderChart } from './chart.ts'
 import { renderHome } from './home.ts'
 import { renderSentences } from './sentences.ts'
 import { renderTest } from './test.ts'
-import { renderWords } from './words.ts'
 import { SECTIONS } from './types.ts'
 import type { BoardId } from './types.ts'
 
@@ -15,7 +15,7 @@ const MOUNT: Record<BoardId, (board: HTMLElement) => void> = {
     board.innerHTML = renderChart()
   },
   characters: renderCharacters,
-  words: renderWords,
+  cards: renderCards,
   sentences: renderSentences,
   test: renderTest,
 }

@@ -1563,12 +1563,12 @@ code {
   border-left: 2px solid var(--accent-border);
 }
 
-/* ---------- word flashcards ---------- */
+/* ---------- the flashcards ---------- */
 
-/* Three at a time, always three across, and given room to be read: a word
-   needs more than a single kana does, and the answer face carries an emoji and
-   a reading stacked together. */
-.cards--words {
+/* Three at a time, always three across, and given room to be read: a dealt
+   card needs more than one in the wall grid does, and the answer face carries
+   two or three things stacked together. */
+.cards--hand {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(10px, 2.4vw, 20px);
   place-content: center;
@@ -1581,10 +1581,14 @@ code {
 /*
  * Made to look like a card you could pick up: portrait, paper white, rounded,
  * and lifted off the page by a shadow. The row's hue survives as a band across
- * the top rather than flooding the whole face — enough to tie the word to its
+ * the top rather than flooding the whole face — enough to tie the card to its
  * place on the chart, without turning the deck into swatches.
+ *
+ * Shared by both decks on purpose. A dealt character and a dealt word are the
+ * same gesture, and giving them separate looks would say they were not.
  */
-.card--word {
+.card--word,
+.card--kana {
   aspect-ratio: 3 / 4;
 
   & .card__face {
@@ -1611,7 +1615,8 @@ code {
 }
 
 /* The learned ring has to sit outside the card's own rim, or the two fight. */
-.card--word.card--learned .card__face {
+.card--word.card--learned .card__face,
+.card--kana.card--learned .card__face {
   box-shadow:
     inset 0 6px 0 var(--cell-bg),
     inset 0 0 0 2.5px var(--accent),
@@ -1650,7 +1655,19 @@ code {
   }
 }
 
-/* The answer face carries all three at once, so each gives up a little size to
+/* A dealt character is asked alone, so it takes the whole card — far larger
+   than the same shape packed into the wall grid. */
+.card--kana .card__face--front {
+  & .card__as-kana {
+    font-size: clamp(2.4rem, 9vw, 3.4rem);
+  }
+  & .card__as-romaji {
+    font-size: clamp(1.05rem, 4vw, 1.5rem);
+  }
+}
+
+/* The answer face carries everything the card knows at once — three forms, or
+   a word's spelling, meaning and reading — so each gives up a little size to
    fit beside the others. */
 .card__face--all {
   gap: 2px;
@@ -1661,6 +1678,17 @@ code {
   & .card__as-word {
     font-size: clamp(0.95rem, 3.4vw, 1.3rem);
   }
+  & .card__as-kana {
+    font-size: clamp(1.35rem, 5vw, 1.9rem);
+  }
+}
+
+/* The pair sits on one line, because that is the fact being taught: あ and ア
+   are one character written twice, not two things that happen to rhyme. */
+.card__pair {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(6px, 2.2vw, 14px);
 }
 
 /*

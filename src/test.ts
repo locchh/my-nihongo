@@ -1,10 +1,9 @@
-import kanaData from './data/kana.json'
 import sentenceData from './data/sentences.json'
 import wordData from './data/words.json'
 import { makeDeck } from './deck.ts'
+import { KANA as kana } from './kana.ts'
 import type { Kana, Sentence, Word } from './types.ts'
 
-const kana = (kanaData as Kana[]).filter((k) => !k.obsolete)
 const words = wordData as Word[]
 const sentences = sentenceData as Sentence[]
 

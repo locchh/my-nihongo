@@ -1,8 +1,6 @@
-import kanaData from './data/kana.json'
+import { KANA, twins } from './kana.ts'
 import { ROW_HUE, learnedIn } from './types.ts'
 import type { Kana, KanaType, Script } from './types.ts'
-
-const kana = kanaData as Kana[]
 
 /** `recognize` reads Japanese; `produce` writes it. Different skills. */
 type Direction = 'recognize' | 'produce'
@@ -14,26 +12,13 @@ const GROUPS: { type: KanaType; title: string; note: string }[] = [
   { type: 'yoon', title: 'Yōon', note: 'き + ゃ → きゃ, one mora' },
 ]
 
-/**
- * Hepburn collapses じ/ぢ to `ji` and ず/づ to `zu`, so in produce mode a romaji
- * prompt can have two correct answers. Forward it is unambiguous, so this only
- * matters one way round.
- */
-const AMBIGUOUS = new Map<string, Kana[]>()
-for (const k of kana.filter((c) => !c.obsolete)) {
-  AMBIGUOUS.set(k.romaji, [...(AMBIGUOUS.get(k.romaji) ?? []), k])
-}
-
 let script: Script = 'hiragana'
 let direction: Direction = 'recognize'
 
 const shapeOf = (k: Kana): string => (script === 'hiragana' ? k.hiragana : k.katakana)
 
-const alsoValid = (k: Kana): string =>
-  (AMBIGUOUS.get(k.romaji) ?? [])
-    .filter((other) => other.hiragana !== k.hiragana)
-    .map(shapeOf)
-    .join(' ')
+/** In produce mode the prompt is a reading, and じ/ぢ share one. */
+const alsoValid = (k: Kana): string => twins(k).map(shapeOf).join(' ')
 
 const card = (k: Kana): string => {
   const shape = shapeOf(k)
@@ -62,7 +47,7 @@ const card = (k: Kana): string => {
 }
 
 const group = (type: KanaType, title: string, note: string): string => {
-  const items = kana.filter((k) => k.type === type && !k.obsolete)
+  const items = KANA.filter((k) => k.type === type)
   const done = items.filter((k) => learnedIn(k, script)).length
   // Produce mode is prompted by the reading, so じ and ぢ would appear as two
   // identical `ji` cards. Show one, and let its back name both answers.

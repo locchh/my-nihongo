@@ -30,9 +30,11 @@ Background on the writing system — why there are four scripts, where kana came
 from, and what romaji loses — is in [docs/OVERVIEW.md](docs/OVERVIEW.md).
 
 ## Features
-- Character board
-- Flash Card
-- Random Test (Character or word)
+- Character board — every kana at once, in either script and either direction
+- Flashcards — three at a time, characters or words, dealt at random from what
+  you have marked as learned. A character is asked in a kana you have marked or
+  as its reading; turning it over gives all three
+- Random Test (character, word or phrase)
 
 ## Related to
 

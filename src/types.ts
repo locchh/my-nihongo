@@ -1,7 +1,7 @@
 export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
-export type BoardId = 'home' | 'chart' | 'characters' | 'words' | 'sentences' | 'test'
+export type BoardId = 'home' | 'chart' | 'characters' | 'cards' | 'sentences' | 'test'
 
 /** Time of day the homepage is painted in. Three, not a smooth cycle. */
 export type Phase = 'morning' | 'afternoon' | 'night'
@@ -14,7 +14,9 @@ export type Phase = 'morning' | 'afternoon' | 'night'
 export const SECTIONS: { id?: BoardId; label: string; ja: string }[] = [
   { id: 'chart', label: 'Full board', ja: '五十音' },
   { id: 'characters', label: 'Characters', ja: '文字' },
-  { id: 'words', label: 'Words', ja: '単語' },
+  // The one label in katakana, because that is the word: カード is a loan, and
+  // 単語 would name only half of what the board now deals.
+  { id: 'cards', label: 'Flashcards', ja: 'カード' },
   { id: 'sentences', label: 'Phrases', ja: '会話' },
   { id: 'test', label: 'Test', ja: '試験' },
 ]
