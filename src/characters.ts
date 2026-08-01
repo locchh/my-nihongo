@@ -91,24 +91,23 @@ const markup = (): string => `
       )}
     </div>
     <!--
-      The warning is worded per direction, because romaji is only a trap in one
-      of them. Reading the character, romaji is the answer key and reading it
-      first is the whole mistake this app exists to avoid. Producing the
-      character, romaji is the legitimate cue and saying so avoids sounding
-      like a rule the board immediately breaks.
+      One line, worded per direction, because romaji is only a trap in one of
+      them. Reading the character it is the answer key, and taking it first is
+      the whole mistake this app exists to avoid. Producing the character it is
+      the legitimate cue, so there is no warning to give — the note there is
+      about attempting the answer instead, which is the other half of the same
+      idea. Said in as few words as possible: a paragraph of philosophy above
+      the board is a paragraph nobody rereads on the second visit.
     -->
     <p class="board__note">
       ${
         direction === 'recognize'
-          ? `Say the sound aloud, then tap to check. The romaji on the back is
-             the answer key, not something to read from — take it first often
-             enough and the Latin letters quietly become the thing you know,
-             while the kana stay decoration.`
-          : `See the reading, picture the character, then tap to check. Romaji
-             is only the cue here; the kana is the answer, and picturing it
-             before you turn the card is the part that does the work.`
+          ? `Say the sound before you tap. Romaji is the answer key, never the
+             thing you read from — take it first and the kana stay decoration.`
+          : `Picture the character before you tap. Reaching for it, rather than
+             recognising it, is the part that does the work.`
       }
-      A ring marks what you have already learned.
+      A ring marks what you know.
     </p>
     ${GROUPS.map((g) => group(g.type, g.title, g.note)).join('')}
   </section>`
