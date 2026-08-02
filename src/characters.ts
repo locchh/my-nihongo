@@ -27,6 +27,9 @@ const card = (k: Kana): string => {
   const front = recognizing ? shape : reading
   const back = recognizing ? reading : shape
   const also = recognizing ? '' : alsoValid(k)
+  // Yōon are written with two glyphs and need to be typeset as a pair, whether
+  // they are the question or the answer.
+  const asKana = `card__as-kana${shape.length > 1 ? ' card__as-kana--pair' : ''}`
 
   // The hidden face is aria-hidden, not just visually turned away: otherwise a
   // screen reader reads prompt and answer together and the recall attempt —
@@ -36,9 +39,9 @@ const card = (k: Kana): string => {
             style="--hue: ${ROW_HUE[k.row ?? 'a'] ?? 0}"
             aria-expanded="false" aria-label="${front} — reveal answer">
       <span class="card__inner">
-        <span class="card__face card__face--front card__as-${recognizing ? 'kana' : 'romaji'}"
+        <span class="card__face card__face--front ${recognizing ? asKana : 'card__as-romaji'}"
               ${recognizing ? 'lang="ja"' : ''}>${front}</span>
-        <span class="card__face card__face--back card__as-${recognizing ? 'romaji' : 'kana'}"
+        <span class="card__face card__face--back ${recognizing ? 'card__as-romaji' : asKana}"
               ${recognizing ? '' : 'lang="ja"'} aria-hidden="true">
           ${back}${also ? `<small class="card__also">or ${also}</small>` : ''}
         </span>

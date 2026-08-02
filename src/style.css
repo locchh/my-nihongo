@@ -1224,6 +1224,27 @@ code {
 
 .card__as-kana {
   font-size: clamp(1.5rem, 6vw, 2.1rem);
+  /* A character is never broken across lines. A yōon is written with two
+     glyphs and is still one character — き stacked above ゃ reads as two. */
+  white-space: nowrap;
+}
+
+/*
+ * And a yōon needs a cell that can hold two glyphs.
+ *
+ * The cell and the type here were measured with different rulers: the track is
+ * minmax(4rem, 1fr) and the type is 6vw capped at 2.1rem. Past about 560px the
+ * cap holds the type at 33.6px while the track sits at roughly 65px, and two
+ * full-width glyphs want 67px of it. It used to break the line, and because
+ * the face is absolutely positioned inside a square card the second glyph had
+ * nowhere to go — it landed outside the colour, on top of the row below.
+ *
+ * The rule above now forbids the break, so without this the pair would spill
+ * sideways instead. Sizing it to the pair is the actual fix; nowrap only makes
+ * sure a near miss can never split a character again.
+ */
+.card__as-kana--pair {
+  font-size: clamp(1.05rem, 3.6vw, 1.55rem);
 }
 
 .card__as-romaji {
@@ -1684,9 +1705,14 @@ code {
 }
 
 /* The pair sits on one line, because that is the fact being taught: あ and ア
-   are one character written twice, not two things that happen to rhyme. */
+   are one character written twice, not two things that happen to rhyme.
+   It wraps rather than squashes, though — きゃ and キャ are four glyphs across
+   a card 93px wide on a phone, and stacking the two forms keeps both readable
+   where holding the line would break each of them in half. */
 .card__pair {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: baseline;
   gap: clamp(6px, 2.2vw, 14px);
 }
