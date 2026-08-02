@@ -5,7 +5,7 @@
     "emoji": "❤️",
     "gloss": "love",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "いえ",
@@ -13,7 +13,7 @@
     "emoji": "🏠",
     "gloss": "house",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "うえ",
@@ -21,7 +21,7 @@
     "emoji": "⬆️",
     "gloss": "above",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "え",
@@ -29,7 +29,7 @@
     "emoji": "🖼️",
     "gloss": "picture",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "あおい",
@@ -37,7 +37,7 @@
     "emoji": "🔵",
     "gloss": "blue",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "かお",
@@ -45,7 +45,7 @@
     "emoji": "🧒",
     "gloss": "face",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "き",
@@ -53,7 +53,7 @@
     "emoji": "🌳",
     "gloss": "tree",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "くうき",
@@ -61,7 +61,7 @@
     "emoji": "💨",
     "gloss": "air",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "いけ",
@@ -69,7 +69,7 @@
     "emoji": "🏞️",
     "gloss": "pond",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "こい",
@@ -77,7 +77,7 @@
     "emoji": "🎏",
     "gloss": "carp",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "かさ",
@@ -85,7 +85,7 @@
     "emoji": "☂️",
     "gloss": "umbrella",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "あし",
@@ -93,7 +93,7 @@
     "emoji": "🦵",
     "gloss": "leg",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "いす",
@@ -101,7 +101,7 @@
     "emoji": "🪑",
     "gloss": "chair",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "あせ",
@@ -109,7 +109,7 @@
     "emoji": "💦",
     "gloss": "sweat",
     "script": "hiragana",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "うそ",
@@ -117,6 +117,46 @@
     "emoji": "🤥",
     "gloss": "a lie",
     "script": "hiragana",
-    "learned": false
+    "learned": true
+  },
+  {
+    "japanese": "たこ",
+    "romaji": "tako",
+    "emoji": "🐙",
+    "gloss": "octopus",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ち",
+    "romaji": "chi",
+    "emoji": "🩸",
+    "gloss": "blood",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "くつ",
+    "romaji": "kutsu",
+    "emoji": "👟",
+    "gloss": "shoes",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "て",
+    "romaji": "te",
+    "emoji": "✋",
+    "gloss": "hand",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "とけい",
+    "romaji": "tokei",
+    "emoji": "⏰",
+    "gloss": "clock",
+    "script": "hiragana",
+    "learned": true
   }
 ]
