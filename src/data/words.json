@@ -158,5 +158,125 @@
     "gloss": "clock",
     "script": "hiragana",
     "learned": true
+  },
+  {
+    "japanese": "なか",
+    "romaji": "naka",
+    "emoji": "🎯",
+    "gloss": "middle",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "にく",
+    "romaji": "niku",
+    "emoji": "🥩",
+    "gloss": "meat",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "いぬ",
+    "romaji": "inu",
+    "emoji": "🐶",
+    "gloss": "dog",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ねこ",
+    "romaji": "neko",
+    "emoji": "🐱",
+    "gloss": "cat",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "おの",
+    "romaji": "ono",
+    "emoji": "🪓",
+    "gloss": "axe",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "はな",
+    "romaji": "hana",
+    "emoji": "👃",
+    "gloss": "nose",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ひと",
+    "romaji": "hito",
+    "emoji": "🧑",
+    "gloss": "person",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ふね",
+    "romaji": "fune",
+    "emoji": "⛵",
+    "gloss": "boat",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "へそ",
+    "romaji": "heso",
+    "emoji": "🫃",
+    "gloss": "belly button",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ほし",
+    "romaji": "hoshi",
+    "emoji": "⭐",
+    "gloss": "star",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "うま",
+    "romaji": "uma",
+    "emoji": "🐴",
+    "gloss": "horse",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "みみ",
+    "romaji": "mimi",
+    "emoji": "👂",
+    "gloss": "ear",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "むし",
+    "romaji": "mushi",
+    "emoji": "🐛",
+    "gloss": "bug",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "め",
+    "romaji": "me",
+    "emoji": "👁️",
+    "gloss": "eye",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "もも",
+    "romaji": "momo",
+    "emoji": "🍑",
+    "gloss": "peach",
+    "script": "hiragana",
+    "learned": true
   }
 ]
