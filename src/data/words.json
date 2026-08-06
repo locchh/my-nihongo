@@ -278,5 +278,85 @@
     "gloss": "peach",
     "script": "hiragana",
     "learned": true
+  },
+  {
+    "japanese": "やま",
+    "romaji": "yama",
+    "emoji": "🏔️",
+    "gloss": "mountain",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ゆく",
+    "romaji": "yuku",
+    "emoji": "🚶",
+    "gloss": "to go",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "よてい",
+    "romaji": "yotei",
+    "emoji": "📅",
+    "gloss": "plan",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "さくら",
+    "romaji": "sakura",
+    "emoji": "🌸",
+    "gloss": "cherry blossom",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "りか",
+    "romaji": "rika",
+    "emoji": "🔬",
+    "gloss": "science",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "くるま",
+    "romaji": "kuruma",
+    "emoji": "🚗",
+    "gloss": "car",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "れきし",
+    "romaji": "rekishi",
+    "emoji": "📜",
+    "gloss": "history",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "しろくま",
+    "romaji": "shirokuma",
+    "emoji": "🐻‍❄️",
+    "gloss": "polar bear",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "わに",
+    "romaji": "wani",
+    "emoji": "🐊",
+    "gloss": "crocodile",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "しんかんせん",
+    "romaji": "shinkansen",
+    "emoji": "🚄",
+    "gloss": "bullet train",
+    "script": "hiragana",
+    "learned": true
   }
 ]

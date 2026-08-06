@@ -187,5 +187,14 @@
     "register": "polite",
     "note": "said on parting for the night, or going to bed",
     "learned": false
+  },
+  {
+    "japanese": "ごはんをたべる",
+    "romaji": "gohan wo taberu",
+    "english": "eat a meal",
+    "topic": "food",
+    "register": "casual",
+    "note": "written wo but read o — を only ever marks the object of a verb, it never starts an ordinary word",
+    "learned": true
   }
 ]
