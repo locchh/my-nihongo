@@ -288,10 +288,10 @@
     "learned": true
   },
   {
-    "japanese": "ゆく",
-    "romaji": "yuku",
-    "emoji": "🚶",
-    "gloss": "to go",
+    "japanese": "ゆき",
+    "romaji": "yuki",
+    "emoji": "❄️",
+    "gloss": "snow",
     "script": "hiragana",
     "learned": true
   },
@@ -356,6 +356,206 @@
     "romaji": "shinkansen",
     "emoji": "🚄",
     "gloss": "bullet train",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "がいこくご",
+    "romaji": "gaikokugo",
+    "emoji": "🗣️",
+    "gloss": "foreign language",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ぎんこう",
+    "romaji": "ginkou",
+    "emoji": "🏦",
+    "gloss": "bank",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "まぐろ",
+    "romaji": "maguro",
+    "emoji": "🍣",
+    "gloss": "tuna",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "げんき",
+    "romaji": "genki",
+    "emoji": "💪",
+    "gloss": "healthy, in good spirits",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "にほんご",
+    "romaji": "nihongo",
+    "emoji": "🇯🇵",
+    "gloss": "the Japanese language",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ひざ",
+    "romaji": "hiza",
+    "emoji": "🧎",
+    "gloss": "knee",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "そうじ",
+    "romaji": "souji",
+    "emoji": "🧹",
+    "gloss": "cleaning",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ちず",
+    "romaji": "chizu",
+    "emoji": "🗺️",
+    "gloss": "map",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "かぜ",
+    "romaji": "kaze",
+    "emoji": "🌬️",
+    "gloss": "wind",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "かぞく",
+    "romaji": "kazoku",
+    "emoji": "👨‍👩‍👧‍👦",
+    "gloss": "family",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "だいがく",
+    "romaji": "daigaku",
+    "emoji": "🎓",
+    "gloss": "university",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "はなぢ",
+    "romaji": "hanaji",
+    "emoji": "🤧",
+    "gloss": "nosebleed",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "みかづき",
+    "romaji": "mikazuki",
+    "emoji": "🌙",
+    "gloss": "crescent moon",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "でぐち",
+    "romaji": "deguchi",
+    "emoji": "🚪",
+    "gloss": "exit",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "まど",
+    "romaji": "mado",
+    "emoji": "🪟",
+    "gloss": "window",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "たばこ",
+    "romaji": "tabako",
+    "emoji": "🚬",
+    "gloss": "cigarette",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ゆびわ",
+    "romaji": "yubiwa",
+    "emoji": "💍",
+    "gloss": "ring",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ぶた",
+    "romaji": "buta",
+    "emoji": "🐷",
+    "gloss": "pig",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "おべんとう",
+    "romaji": "obentou",
+    "emoji": "🍱",
+    "gloss": "packed lunch",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ぼうし",
+    "romaji": "boushi",
+    "emoji": "🧢",
+    "gloss": "hat",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "かっぱ",
+    "romaji": "kappa",
+    "emoji": "🐢",
+    "gloss": "kappa, a river sprite",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "えんぴつ",
+    "romaji": "enpitsu",
+    "emoji": "✏️",
+    "gloss": "pencil",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "きっぷ",
+    "romaji": "kippu",
+    "emoji": "🎫",
+    "gloss": "ticket",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "ほっぺ",
+    "romaji": "hoppe",
+    "emoji": "😊",
+    "gloss": "cheek",
+    "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "さんぽ",
+    "romaji": "sanpo",
+    "emoji": "🚶",
+    "gloss": "a walk",
     "script": "hiragana",
     "learned": true
   }
