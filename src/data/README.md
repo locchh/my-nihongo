@@ -24,6 +24,7 @@ The wall chart and the test are unaffected: both always cover the lot.
   "japanese": "かさ",
   "romaji": "kasa",
   "emoji": "☂️",
+  "vi": "",
   "gloss": "umbrella",
   "script": "hiragana",
   "learned": false
@@ -34,6 +35,15 @@ The wall chart and the test are unaffected: both always cover the lot.
 meant to build a direct hop from the Japanese to the thing, and English in the
 middle is one more step to translate through. `gloss` is what a screen reader
 announces for that emoji — it never appears on a card.
+
+`vi` is the meaning in Vietnamese, and it is for the words no emoji will name.
+A classroom, a reputation, three hundred: the nearest picture points at the
+word rather than saying it, and a card you cannot answer from the front is not
+a question. Fill `vi` and leave `emoji` empty and the card shows the Vietnamese
+instead — still not English, which is the rule the emoji was there to keep.
+
+Exactly one of the two carries the meaning. Both fields are always present,
+empty where they have nothing to say, the way `note` is on a phrase.
 
 `script` is `hiragana` or `katakana`, and it is a property of the word rather
 than a choice: native words take hiragana, borrowed ones katakana.

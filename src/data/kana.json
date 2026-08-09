@@ -898,7 +898,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -910,7 +910,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -922,7 +922,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -936,7 +936,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -950,7 +950,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -964,7 +964,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -978,7 +978,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -992,7 +992,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1006,7 +1006,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1018,7 +1018,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1030,7 +1030,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1042,7 +1042,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1054,7 +1054,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1066,7 +1066,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1078,7 +1078,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1090,7 +1090,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1102,7 +1102,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1114,7 +1114,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1126,7 +1126,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1138,7 +1138,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1150,7 +1150,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1162,7 +1162,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1174,7 +1174,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1186,7 +1186,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1201,7 +1201,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1216,7 +1216,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1231,7 +1231,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1243,7 +1243,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1255,7 +1255,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1267,7 +1267,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1279,7 +1279,7 @@
     "column": "a",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1291,7 +1291,7 @@
     "column": "u",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   },
   {
@@ -1303,7 +1303,7 @@
     "column": "o",
     "type": "yoon",
     "obsolete": false,
-    "learnedHiragana": false,
+    "learnedHiragana": true,
     "learnedKatakana": false
   }
 ]

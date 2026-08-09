@@ -71,11 +71,19 @@ export const learnedIn = (k: Kana, script: Script): boolean =>
  * the deck is a direct hop from the Japanese to the thing, with no English in
  * between to translate through. `gloss` exists so screen readers and search
  * have something to say, and never appears on the card.
+ *
+ * Some meanings no emoji will name. A classroom, a reputation, three hundred —
+ * the nearest picture points at the word rather than saying it, and a card you
+ * cannot answer from the front is not a question. Those carry `vi` instead:
+ * Vietnamese, the reader's own language, which keeps the hop as direct as the
+ * emoji was meant to be. Exactly one of the two is filled.
  */
 export interface Word {
   japanese: string
   romaji: string
   emoji: string
+  /** Vietnamese, when no emoji will do. Empty when the emoji says it. */
+  vi: string
   gloss: string
   script: Script
   learned: boolean

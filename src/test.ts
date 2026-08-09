@@ -102,11 +102,14 @@ const askCharacter = (k: Kana): Question => {
   }
 }
 
+/** The meaning as the card shows it: a picture, or Vietnamese where none fits. */
+const meaning = (w: Word): string => w.emoji || w.vi
+
 const askWord = (w: Word): Question => {
   const faces = ['japanese', 'emoji', 'romaji'] as const
   const from = pick(faces)
   const to = pick(faces.filter((f) => f !== from))
-  const show = { japanese: w.japanese, emoji: w.emoji, romaji: w.romaji }
+  const show = { japanese: w.japanese, emoji: meaning(w), romaji: w.romaji }
   const lang = { japanese: 'ja', emoji: 'emoji', romaji: 'romaji' } as const
   const named = { japanese: 'the word', emoji: 'the meaning', romaji: 'the reading' }
 
@@ -122,7 +125,7 @@ const askWord = (w: Word): Question => {
   if (to !== 'romaji') {
     q.choices = withDistractors(
       show[to],
-      words.map((o) => (to === 'japanese' ? o.japanese : o.emoji)),
+      words.map((o) => (to === 'japanese' ? o.japanese : meaning(o))),
     )
   }
   return q

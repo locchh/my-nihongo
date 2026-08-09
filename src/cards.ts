@@ -125,7 +125,12 @@ const FACES: Face[] = ['japanese', 'emoji', 'romaji']
 const piece = (word: Word, face: Face): string => {
   if (face === 'japanese') return `<span class="card__as-word" lang="ja">${word.japanese}</span>`
   if (face === 'emoji')
-    return `<span class="card__emoji" role="img" aria-label="${word.gloss}">${word.emoji}</span>`
+    // Vietnamese is not a fallback for a missing picture, it is the meaning for
+    // the words a picture cannot carry — and it is still not English, which is
+    // the rule the emoji was there to keep.
+    return word.emoji
+      ? `<span class="card__emoji" role="img" aria-label="${word.gloss}">${word.emoji}</span>`
+      : `<span class="card__vi" lang="vi">${word.vi}</span>`
   return `<span class="card__reading">${word.romaji}</span>`
 }
 

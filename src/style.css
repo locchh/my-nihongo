@@ -1663,6 +1663,17 @@ code {
   opacity: 0.75;
 }
 
+/* Where the meaning is Vietnamese rather than a picture. Set as words, not as
+   an emoji: it wraps, it shrinks to fit, and it never grows to the size the
+   emoji is given — a phrase at 2.4rem would not fit the card twice over. */
+.card__vi {
+  font-size: clamp(0.8rem, 3vw, 1.05rem);
+  line-height: 1.25;
+  text-wrap: balance;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 /* As a prompt, each of the three stands alone and gets the room to. The
    reading in particular is sized as a footnote on the answer face, which is
    far too quiet when it is the question being asked. */
@@ -1673,6 +1684,9 @@ code {
   }
   & .card__emoji {
     font-size: clamp(2rem, 7.5vw, 2.8rem);
+  }
+  & .card__vi {
+    font-size: clamp(0.95rem, 3.6vw, 1.3rem);
   }
 }
 
