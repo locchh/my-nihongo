@@ -15,7 +15,7 @@
     "topic": "greeting",
     "register": "polite",
     "note": "ございます is what makes it polite — it turns up on the end of a lot of set phrases",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "こんにちは",
@@ -24,7 +24,7 @@
     "topic": "greeting",
     "register": "neutral",
     "note": "written は but read wa — it is the topic particle, left over from a longer sentence",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "こんばんは",
@@ -33,7 +33,7 @@
     "topic": "greeting",
     "register": "neutral",
     "note": "は is read wa here too, for the same reason",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "やあ",
@@ -87,7 +87,7 @@
     "topic": "wellbeing",
     "register": "polite",
     "note": "か marks a question. Asked of someone you have not seen in a while, not daily",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "げんきです",
@@ -123,7 +123,7 @@
     "topic": "courtesy",
     "register": "polite",
     "note": "",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "どういたしまして",
@@ -141,7 +141,7 @@
     "topic": "courtesy",
     "register": "polite",
     "note": "does three jobs: apology, getting attention, and a modest sort of thank you",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "ごめんなさい",
@@ -150,7 +150,7 @@
     "topic": "courtesy",
     "register": "neutral",
     "note": "a real apology, where すみません can be a passing one",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "さようなら",
@@ -159,7 +159,7 @@
     "topic": "farewell",
     "register": "neutral",
     "note": "carries a sense of parting for a long while — not what you say leaving the office",
-    "learned": false
+    "learned": true
   },
   {
     "japanese": "またね",
@@ -195,6 +195,213 @@
     "topic": "food",
     "register": "casual",
     "note": "written wo but read o — を only ever marks the object of a verb, it never starts an ordinary word",
+    "learned": true
+  },
+  {
+    "japanese": "いいてんきですね",
+    "romaji": "ii tenki desu ne",
+    "english": "beautiful weather, right?",
+    "topic": "greeting",
+    "register": "neutral",
+    "note": "ね asks you to agree rather than telling you. It is the whole point of the sentence — the weather is an excuse to say something friendly.",
+    "learned": true
+  },
+  {
+    "japanese": "おひさしぶりですね",
+    "romaji": "ohisashiburi desu ne",
+    "english": "long time no see",
+    "topic": "greeting",
+    "register": "polite",
+    "note": "ひさしぶり is the gap itself, not the meeting. お and です make it a greeting you can use with anyone.",
+    "learned": true
+  },
+  {
+    "japanese": "またあえてうれしいです",
+    "romaji": "mata aete ureshii desu",
+    "english": "so good to see you again",
+    "topic": "greeting",
+    "register": "polite",
+    "note": "",
+    "learned": true
+  },
+  {
+    "japanese": "げんきでしたか",
+    "romaji": "genki deshita ka",
+    "english": "how have you been?",
+    "topic": "wellbeing",
+    "register": "neutral",
+    "note": "おげんきでしたか, with the お, is the politer form — the same お as in おげんきですか.",
+    "learned": true
+  },
+  {
+    "japanese": "さいきんどうですか",
+    "romaji": "saikin dou desu ka",
+    "english": "so, what is new?",
+    "topic": "wellbeing",
+    "register": "polite",
+    "note": "",
+    "learned": true
+  },
+  {
+    "japanese": "どうも",
+    "romaji": "doumo",
+    "english": "thanks",
+    "topic": "courtesy",
+    "register": "casual",
+    "note": "On its own it is a light thanks. It also softens どうもありがとうございます into something warmer, and can even mean hello.",
+    "learned": true
+  },
+  {
+    "japanese": "たすかりました",
+    "romaji": "tasukarimashita",
+    "english": "you really helped me",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "Literally I was saved. Said after the help, where ありがとう can be said before.",
+    "learned": true
+  },
+  {
+    "japanese": "かんしゃいたします",
+    "romaji": "kansha itashimasu",
+    "english": "I am grateful",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "いたします is the humble form of します — you lower yourself rather than raise the other person. Formal, and more often written than said.",
+    "learned": true
+  },
+  {
+    "japanese": "こちらこそありがとうございます",
+    "romaji": "kochira koso arigatou gozaimasu",
+    "english": "I should be the one thanking you",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "こちらこそ is it is I who — it hands the thanks back.",
+    "learned": true
+  },
+  {
+    "japanese": "わるかった",
+    "romaji": "warukatta",
+    "english": "my bad",
+    "topic": "courtesy",
+    "register": "casual",
+    "note": "The plain past of わるい. Among friends only; to anyone else it lands as no apology at all.",
+    "learned": true
+  },
+  {
+    "japanese": "もうしわけありません",
+    "romaji": "moushiwake arimasen",
+    "english": "I sincerely apologize",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "Literally there is no excuse. Heavier than すみません, and the one to reach for when something actually went wrong.",
+    "learned": true
+  },
+  {
+    "japanese": "いえいえ",
+    "romaji": "ie ie",
+    "english": "no no",
+    "topic": "courtesy",
+    "register": "casual",
+    "note": "Doubled, because a single いえ is a flat refusal. The repetition is what makes it kind.",
+    "learned": true
+  },
+  {
+    "japanese": "とんでもないです",
+    "romaji": "tondemonai desu",
+    "english": "not at all",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "Waves away thanks or praise. Not a denial of the fact, a refusal of the credit.",
+    "learned": true
+  },
+  {
+    "japanese": "やくにたててよかったです",
+    "romaji": "yaku ni tatete yokatta desu",
+    "english": "I am glad I could help",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "",
+    "learned": true
+  },
+  {
+    "japanese": "もんだいありませんよ",
+    "romaji": "mondai arimasen yo",
+    "english": "there is no problem",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "よ tells you something you did not know. Without it the sentence states a fact; with it, it reassures.",
+    "learned": true
+  },
+  {
+    "japanese": "だいじょうぶですよ",
+    "romaji": "daijoubu desu yo",
+    "english": "do not worry about it",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "",
+    "learned": true
+  },
+  {
+    "japanese": "こちらこそすみません",
+    "romaji": "kochira koso sumimasen",
+    "english": "no, I am the one who should apologize",
+    "topic": "courtesy",
+    "register": "polite",
+    "note": "The same こちらこそ, handing back an apology instead of thanks.",
+    "learned": true
+  },
+  {
+    "japanese": "おさきにしつれいします",
+    "romaji": "osaki ni shitsurei shimasu",
+    "english": "I will be leaving first",
+    "topic": "farewell",
+    "register": "polite",
+    "note": "Literally I am being rude by going ahead. Said when you leave work before the others, and the apology is the politeness.",
+    "learned": true
+  },
+  {
+    "japanese": "おつかれさまでした",
+    "romaji": "otsukaresama deshita",
+    "english": "thank you for your hard work",
+    "topic": "farewell",
+    "register": "polite",
+    "note": "What everyone says at the end of the day, in both directions. English has no phrase for it — thank you for your hard work is the sense, not a translation.",
+    "learned": true
+  },
+  {
+    "japanese": "ではしつれいします",
+    "romaji": "dewa shitsurei shimasu",
+    "english": "I will be leaving now",
+    "topic": "farewell",
+    "register": "polite",
+    "note": "では is the formal では; じゃ is the same word worn down.",
+    "learned": true
+  },
+  {
+    "japanese": "じゃ、また",
+    "romaji": "ja, mata",
+    "english": "see you later",
+    "topic": "farewell",
+    "register": "casual",
+    "note": "じゃ is では said quickly, and また on its own carries the rest — see you again.",
+    "learned": true
+  },
+  {
+    "japanese": "れんらくをとりあいましょう",
+    "romaji": "renraku wo toriaimashou",
+    "english": "let us keep in touch",
+    "topic": "farewell",
+    "register": "polite",
+    "note": "ましょう invites rather than asks. を marks what the verb acts on, as it always does.",
+    "learned": true
+  },
+  {
+    "japanese": "よいいちにちを",
+    "romaji": "yoi ichinichi wo",
+    "english": "have a good day",
+    "topic": "farewell",
+    "register": "neutral",
+    "note": "It stops mid-sentence. おすごしください is left unsaid, and leaving it out is what makes it a set phrase rather than an instruction.",
     "learned": true
   }
 ]
