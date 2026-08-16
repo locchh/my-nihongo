@@ -71,6 +71,23 @@ const askableForms = (k: Kana): Form[] => {
 const plain = (k: Kana, form: Form): string =>
   form === 'hiragana' ? k.hiragana : form === 'katakana' ? k.katakana : k.romaji
 
+/**
+ * What the front of the card is, said out loud.
+ *
+ * あ and ア are the same character in two hands, which is exactly why a shape
+ * you half know is ambiguous in the worst way: not "which sound is this" but
+ * "which of the two am I even looking at". And a reading asks you to write
+ * something without saying which script to write it in. Naming the face costs
+ * nothing the answer was hiding — the sound is still yours to produce.
+ */
+const FORM_NAME: Record<Form, string> = {
+  hiragana: 'hiragana',
+  katakana: 'katakana',
+  romaji: 'reading',
+}
+
+const label = (text: string): string => `<span class="card__form">${text}</span>`
+
 const written = (k: Kana, form: Form): string =>
   form === 'romaji'
     ? `<span class="card__as-romaji">${k.romaji}</span>`
@@ -95,9 +112,11 @@ const characterCard = (k: Kana, form: Form): string => {
     <button class="card card--kana${known ? ' card--learned' : ''}" type="button"
             style="--hue: ${ROW_HUE[k.row ?? 'a'] ?? 0}"
             aria-expanded="false"
-            aria-label="${plain(k, form)} — reveal answer">
+            aria-label="${plain(k, form)}, ${FORM_NAME[form]} — reveal answer">
       <span class="card__inner">
-        <span class="card__face card__face--front">${written(k, form)}</span>
+        <span class="card__face card__face--front">
+          ${label(FORM_NAME[form])}${written(k, form)}
+        </span>
         <span class="card__face card__face--back card__face--all" aria-hidden="true">
           <span class="card__pair">${written(k, 'hiragana')}${written(k, 'katakana')}</span>
           ${written(k, 'romaji')}
@@ -156,13 +175,18 @@ const wordCard = (word: Word, face: Face): string => {
   // reading together, which is the thing being memorised.
   const answer = FACES.map((f) => piece(word, f)).join('')
 
+  // Words carry the same label, and it does more work here: a word is written
+  // in one script and not the other, so a meaning or a reading on the front is
+  // a question you cannot answer without being told which hand to write it in.
   return `
     <button class="card card--word${word.learned ? ' card--learned' : ''}" type="button"
             style="--hue: ${hueOf(word)}"
             aria-expanded="false"
-            aria-label="${NAMED[face](word)} — reveal answer">
+            aria-label="${NAMED[face](word)}, ${word.script} — reveal answer">
       <span class="card__inner">
-        <span class="card__face card__face--front">${piece(word, face)}</span>
+        <span class="card__face card__face--front">
+          ${label(word.script)}${piece(word, face)}
+        </span>
         <span class="card__face card__face--back card__face--all" aria-hidden="true">${answer}</span>
       </span>
     </button>`

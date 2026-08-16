@@ -1663,6 +1663,17 @@ code {
   opacity: 0.75;
 }
 
+/* The script the front of the card is asking in. Small and set apart, so it
+   reads as a caption on the question rather than as part of it — and at full
+   --text strength, because a dimmed 11px caption is the sort of thing that
+   passes review and fails contrast. */
+.card__form {
+  font-family: var(--mono);
+  font-size: clamp(0.5rem, 1.9vw, 0.62rem);
+  letter-spacing: 0.1em;
+  color: var(--text);
+}
+
 /* Where the meaning is Vietnamese rather than a picture. Set as words, not as
    an emoji: it wraps, it shrinks to fit, and it never grows to the size the
    emoji is given — a phrase at 2.4rem would not fit the card twice over. */

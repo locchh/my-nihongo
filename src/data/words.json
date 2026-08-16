@@ -47,8 +47,8 @@
   {
     "japanese": "かお",
     "romaji": "kao",
-    "emoji": "🧒",
-    "vi": "",
+    "emoji": "",
+    "vi": "khuôn mặt",
     "gloss": "face",
     "script": "hiragana",
     "learned": true
@@ -65,8 +65,8 @@
   {
     "japanese": "くうき",
     "romaji": "kuuki",
-    "emoji": "💨",
-    "vi": "",
+    "emoji": "",
+    "vi": "không khí",
     "gloss": "air",
     "script": "hiragana",
     "learned": true
@@ -74,8 +74,8 @@
   {
     "japanese": "いけ",
     "romaji": "ike",
-    "emoji": "🏞️",
-    "vi": "",
+    "emoji": "",
+    "vi": "cái ao",
     "gloss": "pond",
     "script": "hiragana",
     "learned": true
@@ -182,9 +182,9 @@
   {
     "japanese": "なか",
     "romaji": "naka",
-    "emoji": "🎯",
-    "vi": "",
-    "gloss": "middle",
+    "emoji": "",
+    "vi": "bên trong",
+    "gloss": "inside, the middle",
     "script": "hiragana",
     "learned": true
   },
@@ -254,9 +254,9 @@
   {
     "japanese": "へそ",
     "romaji": "heso",
-    "emoji": "🫃",
-    "vi": "",
-    "gloss": "belly button",
+    "emoji": "",
+    "vi": "cái rốn",
+    "gloss": "navel",
     "script": "hiragana",
     "learned": true
   },
@@ -434,9 +434,9 @@
   {
     "japanese": "げんき",
     "romaji": "genki",
-    "emoji": "💪",
-    "vi": "",
-    "gloss": "healthy, in good spirits",
+    "emoji": "",
+    "vi": "khỏe mạnh",
+    "gloss": "well, in good spirits",
     "script": "hiragana",
     "learned": true
   },
@@ -452,8 +452,8 @@
   {
     "japanese": "ひざ",
     "romaji": "hiza",
-    "emoji": "🧎",
-    "vi": "",
+    "emoji": "",
+    "vi": "đầu gối",
     "gloss": "knee",
     "script": "hiragana",
     "learned": true
@@ -794,8 +794,8 @@
   {
     "japanese": "ひゃくえん",
     "romaji": "hyakuen",
-    "emoji": "💴",
-    "vi": "",
+    "emoji": "",
+    "vi": "một trăm yên",
     "gloss": "one hundred yen",
     "script": "hiragana",
     "learned": true
@@ -857,8 +857,8 @@
   {
     "japanese": "せんりゃく",
     "romaji": "senryaku",
-    "emoji": "♟️",
-    "vi": "",
+    "emoji": "",
+    "vi": "chiến lược",
     "gloss": "strategy",
     "script": "hiragana",
     "learned": true
@@ -879,6 +879,123 @@
     "vi": "",
     "gloss": "a trip",
     "script": "hiragana",
+    "learned": true
+  },
+  {
+    "japanese": "エア",
+    "romaji": "ea",
+    "emoji": "",
+    "vi": "khí (từ mượn: air)",
+    "gloss": "air, as in air conditioning",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ウエア",
+    "romaji": "uea",
+    "emoji": "",
+    "vi": "trang phục",
+    "gloss": "wear, clothing",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "オイ",
+    "romaji": "oi",
+    "emoji": "",
+    "vi": "này! (tiếng gọi)",
+    "gloss": "hey! — a shout",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "カー",
+    "romaji": "kaa",
+    "emoji": "",
+    "vi": "xe hơi (từ mượn: car)",
+    "gloss": "car, the loanword",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キウイ",
+    "romaji": "kiui",
+    "emoji": "🥝",
+    "vi": "",
+    "gloss": "kiwi",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キク",
+    "romaji": "kiku",
+    "emoji": "🌼",
+    "vi": "",
+    "gloss": "chrysanthemum",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ケーキ",
+    "romaji": "keeki",
+    "emoji": "🍰",
+    "vi": "",
+    "gloss": "cake",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ココア",
+    "romaji": "kokoa",
+    "emoji": "",
+    "vi": "ca cao",
+    "gloss": "cocoa",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "サイ",
+    "romaji": "sai",
+    "emoji": "🦏",
+    "vi": "",
+    "gloss": "rhinoceros",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ウシ",
+    "romaji": "ushi",
+    "emoji": "🐮",
+    "vi": "",
+    "gloss": "cow",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "スキー",
+    "romaji": "sukii",
+    "emoji": "🎿",
+    "vi": "",
+    "gloss": "skiing",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "セクシー",
+    "romaji": "sekushii",
+    "emoji": "",
+    "vi": "quyến rũ",
+    "gloss": "sexy",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ソース",
+    "romaji": "soosu",
+    "emoji": "",
+    "vi": "nước sốt",
+    "gloss": "sauce",
+    "script": "katakana",
     "learned": true
   }
 ]
