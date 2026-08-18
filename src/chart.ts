@@ -55,5 +55,18 @@ export const renderChart = (): string => {
       <div class="chart__scroll" tabindex="0" role="group" aria-label="Gojūon chart">
         <div class="chart">${header}${rows}${tail}</div>
       </div>
+      <section class="chart__rules" aria-labelledby="chart-rules-title">
+        <h2 id="chart-rules-title">Sound rules <span lang="vi">Quy tắc âm</span></h2>
+        <div class="chart__rule-grid">
+          <div class="chart__rule">
+            <span class="chart__rule-mark" lang="ja">ー</span>
+            <span><strong lang="ja">長音</strong> <span>chouon</span><small>a+a → ああ · i+i → いい · u+u → うう · e+i → えい · o+u → おう</small></span>
+          </div>
+          <div class="chart__rule">
+            <span class="chart__rule-mark" lang="ja">っ</span>
+            <span><strong lang="ja">促音</strong> <span>sokuon</span><small>gấp đôi phụ âm sau · k+k → っか · s+s → っさ · t+t → った</small></span>
+          </div>
+        </div>
+      </section>
     </section>`
 }

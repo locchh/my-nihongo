@@ -997,5 +997,95 @@
     "gloss": "sauce",
     "script": "katakana",
     "learned": true
+  },
+  {
+    "japanese": "タクシー",
+    "romaji": "takushii",
+    "emoji": "🚕",
+    "vi": "",
+    "gloss": "taxi",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "コーチ",
+    "romaji": "kouchi",
+    "emoji": "",
+    "vi": "huấn luyện viên",
+    "gloss": "coach",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ツアー",
+    "romaji": "tsuaa",
+    "emoji": "",
+    "vi": "chuyến tham quan",
+    "gloss": "tour",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "テスト",
+    "romaji": "tesuto",
+    "emoji": "📝",
+    "vi": "",
+    "gloss": "test",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "コート",
+    "romaji": "kouto",
+    "emoji": "🧥",
+    "vi": "",
+    "gloss": "coat",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "スナック",
+    "romaji": "sunakku",
+    "emoji": "",
+    "vi": "đồ ăn nhẹ",
+    "gloss": "snack",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "スニーカー",
+    "romaji": "suniikaa",
+    "emoji": "👟",
+    "vi": "",
+    "gloss": "sneakers",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "カヌー",
+    "romaji": "kanuu",
+    "emoji": "🛶",
+    "vi": "",
+    "gloss": "canoe",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ネクタイ",
+    "romaji": "nekutai",
+    "emoji": "👔",
+    "vi": "",
+    "gloss": "necktie",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ノート",
+    "romaji": "nouto",
+    "emoji": "📓",
+    "vi": "",
+    "gloss": "notebook",
+    "script": "katakana",
+    "learned": true
   }
 ]
