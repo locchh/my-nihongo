@@ -315,7 +315,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ひ",
@@ -327,7 +327,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ふ",
@@ -341,7 +341,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "へ",
@@ -353,7 +353,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ほ",
@@ -365,7 +365,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ま",
@@ -377,7 +377,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "み",
@@ -389,7 +389,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "む",
@@ -401,7 +401,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "め",
@@ -413,7 +413,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "も",
@@ -425,7 +425,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "や",
@@ -437,7 +437,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ゆ",
@@ -449,7 +449,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "よ",
@@ -461,7 +461,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ら",
@@ -473,7 +473,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "り",
@@ -485,7 +485,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "る",
@@ -497,7 +497,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "れ",
@@ -509,7 +509,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ろ",
@@ -521,7 +521,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "わ",
@@ -533,7 +533,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ゐ",
@@ -545,7 +545,7 @@
     "type": "base",
     "obsolete": true,
     "learnedHiragana": false,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ゑ",
@@ -557,7 +557,7 @@
     "type": "base",
     "obsolete": true,
     "learnedHiragana": false,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "を",
@@ -569,7 +569,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ん",
@@ -581,7 +581,7 @@
     "type": "base",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "が",
@@ -593,7 +593,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぎ",
@@ -605,7 +605,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぐ",
@@ -617,7 +617,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "げ",
@@ -629,7 +629,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ご",
@@ -641,7 +641,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ざ",
@@ -653,7 +653,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "じ",
@@ -667,7 +667,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ず",
@@ -679,7 +679,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぜ",
@@ -691,7 +691,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぞ",
@@ -703,7 +703,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "だ",
@@ -715,7 +715,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぢ",
@@ -729,7 +729,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "づ",
@@ -743,7 +743,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "で",
@@ -755,7 +755,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ど",
@@ -767,7 +767,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ば",
@@ -779,7 +779,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "び",
@@ -791,7 +791,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぶ",
@@ -803,7 +803,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "べ",
@@ -815,7 +815,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぼ",
@@ -827,7 +827,7 @@
     "type": "dakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぱ",
@@ -839,7 +839,7 @@
     "type": "handakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぴ",
@@ -851,7 +851,7 @@
     "type": "handakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぷ",
@@ -863,7 +863,7 @@
     "type": "handakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぺ",
@@ -875,7 +875,7 @@
     "type": "handakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぽ",
@@ -887,7 +887,7 @@
     "type": "handakuten",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "きゃ",
@@ -899,7 +899,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "きゅ",
@@ -911,7 +911,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "きょ",
@@ -923,7 +923,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "しゃ",
@@ -937,7 +937,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "しゅ",
@@ -951,7 +951,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "しょ",
@@ -965,7 +965,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ちゃ",
@@ -979,7 +979,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ちゅ",
@@ -993,7 +993,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ちょ",
@@ -1007,7 +1007,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "にゃ",
@@ -1019,7 +1019,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "にゅ",
@@ -1031,7 +1031,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "にょ",
@@ -1043,7 +1043,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ひゃ",
@@ -1055,7 +1055,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ひゅ",
@@ -1067,7 +1067,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ひょ",
@@ -1079,7 +1079,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "みゃ",
@@ -1091,7 +1091,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "みゅ",
@@ -1103,7 +1103,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "みょ",
@@ -1115,7 +1115,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "りゃ",
@@ -1127,7 +1127,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "りゅ",
@@ -1139,7 +1139,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "りょ",
@@ -1151,7 +1151,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぎゃ",
@@ -1163,7 +1163,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぎゅ",
@@ -1175,7 +1175,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぎょ",
@@ -1187,7 +1187,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "じゃ",
@@ -1202,7 +1202,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "じゅ",
@@ -1217,7 +1217,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "じょ",
@@ -1232,7 +1232,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "びゃ",
@@ -1244,7 +1244,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "びゅ",
@@ -1256,7 +1256,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "びょ",
@@ -1268,7 +1268,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぴゃ",
@@ -1280,7 +1280,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぴゅ",
@@ -1292,7 +1292,7 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   },
   {
     "hiragana": "ぴょ",
@@ -1304,6 +1304,6 @@
     "type": "yoon",
     "obsolete": false,
     "learnedHiragana": true,
-    "learnedKatakana": false
+    "learnedKatakana": true
   }
 ]
