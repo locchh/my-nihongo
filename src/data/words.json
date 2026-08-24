@@ -1087,5 +1087,833 @@
     "gloss": "notebook",
     "script": "katakana",
     "learned": true
+  },
+  {
+    "japanese": "ハート",
+    "romaji": "haato",
+    "emoji": "❤️",
+    "vi": "",
+    "gloss": "heart",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "コーヒー",
+    "romaji": "koohii",
+    "emoji": "☕",
+    "vi": "",
+    "gloss": "coffee",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ナイフ",
+    "romaji": "naifu",
+    "emoji": "🔪",
+    "vi": "",
+    "gloss": "knife",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヘトヘト",
+    "romaji": "hetoheto",
+    "emoji": "",
+    "vi": "kiệt sức",
+    "gloss": "exhausted",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ホット",
+    "romaji": "hotto",
+    "emoji": "",
+    "vi": "nóng, ấm",
+    "gloss": "hot or warm",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "マイク",
+    "romaji": "maiku",
+    "emoji": "🎤",
+    "vi": "",
+    "gloss": "microphone",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ミキサー",
+    "romaji": "mikisaa",
+    "emoji": "",
+    "vi": "máy xay, máy trộn",
+    "gloss": "mixer or blender",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キムチ",
+    "romaji": "kimuchi",
+    "emoji": "",
+    "vi": "kimchi",
+    "gloss": "kimchi",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "メキシコ",
+    "romaji": "mekishiko",
+    "emoji": "🇲🇽",
+    "vi": "",
+    "gloss": "Mexico",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "メモ",
+    "romaji": "memo",
+    "emoji": "📝",
+    "vi": "",
+    "gloss": "memo or note",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "タイヤ",
+    "romaji": "taiya",
+    "emoji": "🛞",
+    "vi": "",
+    "gloss": "tire",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ユーモア",
+    "romaji": "yuumoa",
+    "emoji": "",
+    "vi": "sự hài hước",
+    "gloss": "humor",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヨット",
+    "romaji": "yotto",
+    "emoji": "⛵",
+    "vi": "",
+    "gloss": "yacht",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ライス",
+    "romaji": "raisu",
+    "emoji": "🍚",
+    "vi": "",
+    "gloss": "rice, especially Western-style cooked rice",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "リサイクル",
+    "romaji": "risaikuru",
+    "emoji": "♻️",
+    "vi": "",
+    "gloss": "recycling",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ミルク",
+    "romaji": "miruku",
+    "emoji": "🥛",
+    "vi": "",
+    "gloss": "milk",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "レタス",
+    "romaji": "retasu",
+    "emoji": "🥬",
+    "vi": "",
+    "gloss": "lettuce",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ロシア",
+    "romaji": "roshia",
+    "emoji": "🇷🇺",
+    "vi": "",
+    "gloss": "Russia",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "タワー",
+    "romaji": "tawaa",
+    "emoji": "🗼",
+    "vi": "",
+    "gloss": "tower",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ワイン",
+    "romaji": "wain",
+    "emoji": "🍷",
+    "vi": "",
+    "gloss": "wine",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ガム",
+    "romaji": "gamu",
+    "emoji": "",
+    "vi": "kẹo cao su",
+    "gloss": "chewing gum",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ギター",
+    "romaji": "gitaa",
+    "emoji": "🎸",
+    "vi": "",
+    "gloss": "guitar",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ハイキング",
+    "romaji": "haikingu",
+    "emoji": "🥾",
+    "vi": "",
+    "gloss": "hiking",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ゲーム",
+    "romaji": "geemu",
+    "emoji": "🎮",
+    "vi": "",
+    "gloss": "game",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ゴルフ",
+    "romaji": "gorufu",
+    "emoji": "⛳",
+    "vi": "",
+    "gloss": "golf",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ユーザー",
+    "romaji": "yuuzaa",
+    "emoji": "",
+    "vi": "người dùng",
+    "gloss": "user",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ラジオ",
+    "romaji": "rajio",
+    "emoji": "📻",
+    "vi": "",
+    "gloss": "radio",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "チーズ",
+    "romaji": "chiizu",
+    "emoji": "🧀",
+    "vi": "",
+    "gloss": "cheese",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ゼロ",
+    "romaji": "zero",
+    "emoji": "0️⃣",
+    "vi": "",
+    "gloss": "zero",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ゾウ",
+    "romaji": "zou",
+    "emoji": "🐘",
+    "vi": "",
+    "gloss": "elephant",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ダンス",
+    "romaji": "dansu",
+    "emoji": "💃",
+    "vi": "",
+    "gloss": "dance",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "デート",
+    "romaji": "deeto",
+    "emoji": "",
+    "vi": "buổi hẹn hò",
+    "gloss": "romantic date",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ドア",
+    "romaji": "doa",
+    "emoji": "🚪",
+    "vi": "",
+    "gloss": "door",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "バス",
+    "romaji": "basu",
+    "emoji": "🚌",
+    "vi": "",
+    "gloss": "bus",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "テレビ",
+    "romaji": "terebi",
+    "emoji": "📺",
+    "vi": "",
+    "gloss": "television",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "テーブル",
+    "romaji": "teeburu",
+    "emoji": "",
+    "vi": "cái bàn",
+    "gloss": "table",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ベッド",
+    "romaji": "beddo",
+    "emoji": "🛏️",
+    "vi": "",
+    "gloss": "bed",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ズボン",
+    "romaji": "zubon",
+    "emoji": "👖",
+    "vi": "",
+    "gloss": "trousers",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "デパート",
+    "romaji": "depaato",
+    "emoji": "",
+    "vi": "cửa hàng bách hóa",
+    "gloss": "department store",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ピアノ",
+    "romaji": "piano",
+    "emoji": "🎹",
+    "vi": "",
+    "gloss": "piano",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "プール",
+    "romaji": "puuru",
+    "emoji": "🏊",
+    "vi": "",
+    "gloss": "swimming pool",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ボールペン",
+    "romaji": "bourupen",
+    "emoji": "🖊️",
+    "vi": "",
+    "gloss": "ballpoint pen",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ポスト",
+    "romaji": "posuto",
+    "emoji": "📮",
+    "vi": "",
+    "gloss": "postbox",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キャベツ",
+    "romaji": "kyabetsu",
+    "emoji": "🥬",
+    "vi": "",
+    "gloss": "cabbage",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キュウリ",
+    "romaji": "kyuuri",
+    "emoji": "🥒",
+    "vi": "",
+    "gloss": "cucumber",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "キョロキョロ",
+    "romaji": "kyorokyoro",
+    "emoji": "",
+    "vi": "nhìn quanh liên tục",
+    "gloss": "looking around restlessly",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ギャラリー",
+    "romaji": "gyararii",
+    "emoji": "",
+    "vi": "phòng trưng bày",
+    "gloss": "gallery",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "レギュラー",
+    "romaji": "regyuraa",
+    "emoji": "",
+    "vi": "thường xuyên, loại thường",
+    "gloss": "regular",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ギョウザ",
+    "romaji": "gyouza",
+    "emoji": "🥟",
+    "vi": "",
+    "gloss": "gyoza dumpling",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "シャツ",
+    "romaji": "shatsu",
+    "emoji": "👕",
+    "vi": "",
+    "gloss": "shirt",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "シューマイ",
+    "romaji": "shuumai",
+    "emoji": "",
+    "vi": "xíu mại kiểu Nhật",
+    "gloss": "shumai dumpling",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ショッピング",
+    "romaji": "shoppingu",
+    "emoji": "🛍️",
+    "vi": "",
+    "gloss": "shopping",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ジャズ",
+    "romaji": "jazu",
+    "emoji": "🎷",
+    "vi": "",
+    "gloss": "jazz",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ジュース",
+    "romaji": "juusu",
+    "emoji": "🧃",
+    "vi": "",
+    "gloss": "juice",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ジョブ",
+    "romaji": "jobu",
+    "emoji": "💼",
+    "vi": "",
+    "gloss": "job",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "カボチャ",
+    "romaji": "kabocha",
+    "emoji": "🎃",
+    "vi": "",
+    "gloss": "pumpkin",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "チューリップ",
+    "romaji": "chuurippu",
+    "emoji": "🌷",
+    "vi": "",
+    "gloss": "tulip",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "チョコレート",
+    "romaji": "chokoreito",
+    "emoji": "🍫",
+    "vi": "",
+    "gloss": "chocolate",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ニャンコ",
+    "romaji": "nyanko",
+    "emoji": "🐈",
+    "vi": "",
+    "gloss": "kitty",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "メニュー",
+    "romaji": "menyuu",
+    "emoji": "📋",
+    "vi": "",
+    "gloss": "menu",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ハラペーニョ",
+    "romaji": "harapeenyo",
+    "emoji": "🌶️",
+    "vi": "",
+    "gloss": "jalapeño pepper",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヒューマン",
+    "romaji": "hyuuman",
+    "emoji": "🧑",
+    "vi": "",
+    "gloss": "human",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヒョウ",
+    "romaji": "hyou",
+    "emoji": "🐆",
+    "vi": "",
+    "gloss": "leopard",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ビャクダン",
+    "romaji": "byakudan",
+    "emoji": "",
+    "vi": "gỗ đàn hương",
+    "gloss": "sandalwood",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "インタビュー",
+    "romaji": "intaabyuu",
+    "emoji": "🎙️",
+    "vi": "",
+    "gloss": "interview",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ビョンビョン",
+    "romaji": "byonbyon",
+    "emoji": "",
+    "vi": "nảy tưng tưng",
+    "gloss": "bouncing repeatedly",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ピューマ",
+    "romaji": "pyuuma",
+    "emoji": "🐆",
+    "vi": "",
+    "gloss": "puma",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "カンピョウ",
+    "romaji": "kanpyou",
+    "emoji": "",
+    "vi": "dải bầu khô",
+    "gloss": "dried gourd strips",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ミャンマー",
+    "romaji": "myanmaa",
+    "emoji": "🇲🇲",
+    "vi": "",
+    "gloss": "Myanmar",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ミュート",
+    "romaji": "myuuto",
+    "emoji": "🔇",
+    "vi": "",
+    "gloss": "mute",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ミョウガ",
+    "romaji": "myouga",
+    "emoji": "",
+    "vi": "gừng Nhật",
+    "gloss": "Japanese ginger",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "リュート",
+    "romaji": "ryuuto",
+    "emoji": "",
+    "vi": "đàn luýt",
+    "gloss": "lute",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ファミリー",
+    "romaji": "famirii",
+    "emoji": "👪",
+    "vi": "",
+    "gloss": "family",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "バイオリン",
+    "romaji": "vaiorin",
+    "emoji": "🎻",
+    "vi": "",
+    "gloss": "violin",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "パーティー",
+    "romaji": "paatii",
+    "emoji": "🎉",
+    "vi": "",
+    "gloss": "party",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "フィリピン",
+    "romaji": "firipin",
+    "emoji": "🇵🇭",
+    "vi": "",
+    "gloss": "the Philippines",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "サンドウィッチ",
+    "romaji": "sandowicchi",
+    "emoji": "🥪",
+    "vi": "",
+    "gloss": "sandwich",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "クイーン",
+    "romaji": "kuiin",
+    "emoji": "👑",
+    "vi": "",
+    "gloss": "queen",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヴィーガン",
+    "romaji": "viigan",
+    "emoji": "🌱",
+    "vi": "",
+    "gloss": "vegan",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "デュエット",
+    "romaji": "dyuetto",
+    "emoji": "",
+    "vi": "bản song ca",
+    "gloss": "duet",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "タトゥー",
+    "romaji": "tatuu",
+    "emoji": "",
+    "vi": "hình xăm",
+    "gloss": "tattoo",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヒンドゥー",
+    "romaji": "hinduu",
+    "emoji": "🕉️",
+    "vi": "",
+    "gloss": "Hindu",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "シェフ",
+    "romaji": "shefu",
+    "emoji": "🧑‍🍳",
+    "vi": "",
+    "gloss": "chef",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "チェック",
+    "romaji": "chekku",
+    "emoji": "✅",
+    "vi": "",
+    "gloss": "check",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "フェイス",
+    "romaji": "feisu",
+    "emoji": "🙂",
+    "vi": "",
+    "gloss": "face",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ジェリー",
+    "romaji": "jerii",
+    "emoji": "",
+    "vi": "thạch rau câu",
+    "gloss": "jelly",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ハードウェア",
+    "romaji": "haadowea",
+    "emoji": "",
+    "vi": "phần cứng",
+    "gloss": "computer hardware",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "クエスチョン",
+    "romaji": "kuesuchon",
+    "emoji": "❓",
+    "vi": "",
+    "gloss": "question",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ベテラン",
+    "romaji": "beteran",
+    "emoji": "",
+    "vi": "người kỳ cựu",
+    "gloss": "veteran or highly experienced person",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "フォーク",
+    "romaji": "fooku",
+    "emoji": "🍴",
+    "vi": "",
+    "gloss": "fork",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ウォーター",
+    "romaji": "wootaa",
+    "emoji": "💧",
+    "vi": "",
+    "gloss": "water",
+    "script": "katakana",
+    "learned": true
+  },
+  {
+    "japanese": "ヴォルト",
+    "romaji": "voruto",
+    "emoji": "⚡",
+    "vi": "",
+    "gloss": "volt",
+    "script": "katakana",
+    "learned": true
   }
 ]
