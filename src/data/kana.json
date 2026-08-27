@@ -1305,5 +1305,265 @@
     "obsolete": false,
     "learnedHiragana": true,
     "learnedKatakana": true
+  },
+  {
+    "hiragana": "ふぁ",
+    "katakana": "ファ",
+    "romaji": "fa",
+    "alt": [],
+    "row": "h",
+    "column": "a",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ゔぁ",
+    "katakana": "ヴァ",
+    "romaji": "va",
+    "alt": [],
+    "row": "b",
+    "column": "a",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "てぃ",
+    "katakana": "ティ",
+    "romaji": "ti",
+    "alt": [],
+    "row": "t",
+    "column": "i",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ふぃ",
+    "katakana": "フィ",
+    "romaji": "fi",
+    "alt": [],
+    "row": "h",
+    "column": "i",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "うぃ",
+    "katakana": "ウィ",
+    "romaji": "wi",
+    "alt": [],
+    "row": "w",
+    "column": "i",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "くぃ",
+    "katakana": "クィ",
+    "romaji": "qi",
+    "alt": [
+      "kwi"
+    ],
+    "row": "k",
+    "column": "i",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ゔぃ",
+    "katakana": "ヴィ",
+    "romaji": "vi",
+    "alt": [],
+    "row": "b",
+    "column": "i",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "でゅ",
+    "katakana": "デュ",
+    "romaji": "du",
+    "alt": [
+      "dyu"
+    ],
+    "row": "d",
+    "column": "u",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "とぅ",
+    "katakana": "トゥ",
+    "romaji": "tu",
+    "alt": [],
+    "row": "t",
+    "column": "u",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "どぅ",
+    "katakana": "ドゥ",
+    "romaji": "du",
+    "alt": [],
+    "row": "d",
+    "column": "u",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "しぇ",
+    "katakana": "シェ",
+    "romaji": "she",
+    "alt": [],
+    "row": "s",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ちぇ",
+    "katakana": "チェ",
+    "romaji": "che",
+    "alt": [],
+    "row": "ch",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ふぇ",
+    "katakana": "フェ",
+    "romaji": "fe",
+    "alt": [],
+    "row": "h",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "じぇ",
+    "katakana": "ジェ",
+    "romaji": "je",
+    "alt": [],
+    "row": "j",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "うぇ",
+    "katakana": "ウェ",
+    "romaji": "we",
+    "alt": [],
+    "row": "w",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "くぇ",
+    "katakana": "クェ",
+    "romaji": "qe",
+    "alt": [
+      "kwe"
+    ],
+    "row": "k",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ゔぇ",
+    "katakana": "ヴェ",
+    "romaji": "ve",
+    "alt": [],
+    "row": "b",
+    "column": "e",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ふぉ",
+    "katakana": "フォ",
+    "romaji": "fo",
+    "alt": [],
+    "row": "h",
+    "column": "o",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "うぉ",
+    "katakana": "ウォ",
+    "romaji": "wo",
+    "alt": [],
+    "row": "w",
+    "column": "o",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "くぉ",
+    "katakana": "クォ",
+    "romaji": "qo",
+    "alt": [
+      "kwo"
+    ],
+    "row": "k",
+    "column": "o",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
+  },
+  {
+    "hiragana": "ゔぉ",
+    "katakana": "ヴォ",
+    "romaji": "vo",
+    "alt": [],
+    "row": "b",
+    "column": "o",
+    "type": "extended",
+    "obsolete": false,
+    "learnedHiragana": false,
+    "learnedKatakana": true
   }
 ]

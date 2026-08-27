@@ -74,7 +74,12 @@ const withDistractors = (right: string, pool: string[]): string[] => {
 }
 
 const askCharacter = (k: Kana): Question => {
-  const script = pick(['hiragana', 'katakana'] as const)
+  const learnedScripts = (['hiragana', 'katakana'] as const).filter((script) =>
+    script === 'hiragana' ? k.learnedHiragana : k.learnedKatakana,
+  )
+  const script = pick(
+    learnedScripts.length ? learnedScripts : (['hiragana', 'katakana'] as const),
+  )
   const shape = script === 'hiragana' ? k.hiragana : k.katakana
   const shapes = kana.map((o) => (script === 'hiragana' ? o.hiragana : o.katakana))
 

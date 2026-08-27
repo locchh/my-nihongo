@@ -94,19 +94,27 @@ const written = (k: Kana, form: Form): string =>
     : `<span class="card__as-kana" lang="ja">${plain(k, form)}</span>`
 
 /**
- * Turned over, a character gives all three forms at once: the pair side by side
- * above the reading. あ and ア are one character in two hands, and only ever
- * meeting them apart is how they end up remembered as two. The kana you have
- * not marked yet appears here on purpose — the back is the answer key, and this
- * is where the other half is met.
+ * Turned over, a regular character gives all three forms at once: the pair
+ * side by side above the reading. Extended loanword sounds are specifically a
+ * katakana lesson, so their backs show that spelling and the reading only.
  */
 const characterCard = (k: Kana, form: Form): string => {
   // The ring means both kana, not one: the card asks in either, so knowing half
   // of it is not knowing the card.
-  const known = k.learnedHiragana && k.learnedKatakana
+  const known =
+    k.type === 'extended' ? k.learnedKatakana : k.learnedHiragana && k.learnedKatakana
   // Only a romaji prompt is ambiguous — `ji` is じ and ぢ both. Either kana
   // names one character and needs no note.
-  const also = form === 'romaji' ? twins(k).map((o) => `${o.hiragana} ${o.katakana}`) : []
+  const also =
+    form === 'romaji'
+      ? twins(k).map((o) =>
+          o.type === 'extended' ? o.katakana : `${o.hiragana} ${o.katakana}`,
+        )
+      : []
+  const kanaAnswer =
+    k.type === 'extended'
+      ? written(k, 'katakana')
+      : `<span class="card__pair">${written(k, 'hiragana')}${written(k, 'katakana')}</span>`
 
   return `
     <button class="card card--kana${known ? ' card--learned' : ''}" type="button"
@@ -118,7 +126,7 @@ const characterCard = (k: Kana, form: Form): string => {
           ${label(FORM_NAME[form])}${written(k, form)}
         </span>
         <span class="card__face card__face--back card__face--all" aria-hidden="true">
-          <span class="card__pair">${written(k, 'hiragana')}${written(k, 'katakana')}</span>
+          ${kanaAnswer}
           ${written(k, 'romaji')}
           ${also.length ? `<small class="card__also">or <span lang="ja">${also.join(' ')}</span></small>` : ''}
         </span>
@@ -234,7 +242,7 @@ interface Held {
 const DECKS: Record<Mode, Held> = {
   characters: {
     label: 'Characters',
-    note: 'both kana and the reading, mixed',
+    note: 'kana and the reading, mixed',
     held: CHARACTERS.length,
     all: KANA.length,
     narrowed: CHARACTERS !== KANA,
@@ -253,8 +261,8 @@ const DECKS: Record<Mode, Held> = {
 // fronts that are not coming.
 const NOTE: Record<Mode, string> = {
   characters: `Three at a time, each asked in a kana you have marked or as its
-    reading. Give the forms it is not showing you, then turn it over — the back
-    has all three.`,
+    reading. Give the forms it is not showing you, then turn it over for the
+    complete answer.`,
   words: `Three at a time. Each asks in one of three ways — the word, its
     meaning, or its reading. Tap a card to turn it over and see all three.`,
 }

@@ -1,4 +1,4 @@
-export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon'
+export type KanaType = 'base' | 'dakuten' | 'handakuten' | 'yoon' | 'extended'
 export type KanaColumn = 'a' | 'i' | 'u' | 'e' | 'o'
 export type Script = 'hiragana' | 'katakana'
 export type BoardId = 'home' | 'chart' | 'characters' | 'cards' | 'sentences' | 'test'
@@ -25,9 +25,9 @@ export interface Kana {
   /** Stable unique key for this character. */
   hiragana: string
   katakana: string
-  /** Hepburn. Not unique — じ/ぢ are both `ji`, ず/づ are both `zu`. */
+  /** Study reading. Usually Hepburn; extended katakana keeps the requested q spellings. */
   romaji: string
-  /** Kunrei and wapuro spellings an IME also accepts. */
+  /** Other accepted romanizations, including common `kw` spellings. */
   alt: string[]
   /** `null` only for ん, which sits outside the grid. */
   row: string | null

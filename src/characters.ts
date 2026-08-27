@@ -5,11 +5,17 @@ import type { Kana, KanaType, Script } from './types.ts'
 /** `recognize` reads Japanese; `produce` writes it. Different skills. */
 type Direction = 'recognize' | 'produce'
 
-const GROUPS: { type: KanaType; title: string; note: string }[] = [
+const GROUPS: { type: KanaType; title: string; note: string; script?: Script }[] = [
   { type: 'base', title: 'Base', note: '46 shapes — the whole gojūon' },
   { type: 'dakuten', title: 'Dakuten ゛', note: 'voiced: か → が' },
   { type: 'handakuten', title: 'Handakuten ゜', note: 'は row → ぱ row' },
   { type: 'yoon', title: 'Yōon', note: 'き + ゃ → きゃ, one mora' },
+  {
+    type: 'extended',
+    title: 'Extended katakana',
+    note: 'loanword sounds: フ + ァ → ファ',
+    script: 'katakana',
+  },
 ]
 
 let script: Script = 'hiragana'
@@ -112,7 +118,9 @@ const markup = (): string => `
       }
       A ring marks what you know.
     </p>
-    ${GROUPS.map((g) => group(g.type, g.title, g.note)).join('')}
+    ${GROUPS.filter((g) => !g.script || g.script === script)
+      .map((g) => group(g.type, g.title, g.note))
+      .join('')}
   </section>`
 
 /**

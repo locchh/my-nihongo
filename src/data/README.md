@@ -93,10 +93,11 @@ harmless.
 
 ## kana.json — the wall chart, the character flashcards, and the test
 
-The gojūon, and unlikely to need changing: it is a closed set. `learnedHiragana`
-and `learnedKatakana` drive the ring that marks what you already know and the
+The gojūon plus extended katakana combinations. `learnedHiragana` and
+`learnedKatakana` drive the ring that marks what you already know and the
 flashcard deck above, and are the two fields worth editing as you go. On a
-flashcard the ring means both kana, since the card can ask in either.
+regular flashcard the ring means both kana, since the card can ask in either;
+extended katakana are katakana-only study items.
 
 `obsolete` marks ゐ and ゑ, retired in the 1946 reform. They appear greyed on
 the chart and are left out of the cards and the test.
@@ -105,7 +106,7 @@ the chart and are left out of the cards and the test.
 
 Only two lists, and neither grows with the material:
 
-- the four kana groups — base, dakuten, handakuten, yōon — in `characters.ts`,
+- the five kana groups — base, dakuten, handakuten, yōon, extended — in `characters.ts`,
   which is the fixed shape of the writing system
 - the sections themselves, in `types.ts`, which is navigation rather than
   content

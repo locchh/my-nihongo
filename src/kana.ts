@@ -14,9 +14,10 @@ import type { Kana } from './types.ts'
 export const KANA: Kana[] = (kanaData as Kana[]).filter((k) => !k.obsolete)
 
 /**
- * Hepburn collapses じ/ぢ to `ji` and ず/づ to `zu`, so a romaji prompt can have
- * two correct answers. Written the other way round it is unambiguous, so this
- * only matters when the reading is the question.
+ * Some readings have two spellings: じ/ぢ are both `ji`, ず/づ are both `zu`,
+ * and the extended set includes two requested `du` forms. Written the other
+ * way round they are unambiguous, so this only matters when the reading is the
+ * question.
  */
 const BY_READING = new Map<string, Kana[]>()
 for (const k of KANA) {
