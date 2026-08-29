@@ -1,4 +1,4 @@
-import { KANA, twins } from './kana.ts'
+import { KANA, cue, shareCue } from './kana.ts'
 import { ROW_HUE, learnedIn } from './types.ts'
 import type { Kana, KanaType, Script } from './types.ts'
 
@@ -23,15 +23,25 @@ let direction: Direction = 'recognize'
 
 const shapeOf = (k: Kana): string => (script === 'hiragana' ? k.hiragana : k.katakana)
 
-/** In produce mode the prompt is a reading, and じ/ぢ share one. */
-const alsoValid = (k: Kana): string => twins(k).map(shapeOf).join(' ')
+/**
+ * In produce mode the prompt is a cue, and a few characters share one across
+ * groups: `du` is づ by its spelling and ドゥ by its sound. Both are named, but
+ * only those on the board — the extended set is katakana-only, so in hiragana
+ * there is no でぃ card for ぢ to point at.
+ */
+const alsoValid = (k: Kana): string =>
+  shareCue(k)
+    .filter((o) => o.type !== 'extended' || script === 'katakana')
+    .map(shapeOf)
+    .join(' ')
 
 const card = (k: Kana): string => {
   const shape = shapeOf(k)
-  const reading = k.romaji
   const recognizing = direction === 'recognize'
-  const front = recognizing ? shape : reading
-  const back = recognizing ? reading : shape
+  // Reading the character, the answer is its study reading. Writing it, the
+  // prompt is the cue, which differs only for づ and ぢ.
+  const front = recognizing ? shape : cue(k)
+  const back = recognizing ? k.romaji : shape
   const also = recognizing ? '' : alsoValid(k)
   // Yōon are written with two glyphs and need to be typeset as a pair, whether
   // they are the question or the answer.
@@ -58,11 +68,13 @@ const card = (k: Kana): string => {
 const group = (type: KanaType, title: string, note: string): string => {
   const items = KANA.filter((k) => k.type === type)
   const done = items.filter((k) => learnedIn(k, script)).length
-  // Produce mode is prompted by the reading, so じ and ぢ would appear as two
-  // identical `ji` cards. Show one, and let its back name both answers.
+  // Produce mode is prompted by the cue, and two cards in one group with the
+  // same front would be one question asked twice, so only the first stands and
+  // its back names the rest. Nothing collides today — ず/づ are `zu`/`du`,
+  // ドゥ/デュ are `du`/`dyu` — this is what keeps that true as the data grows.
   const shown =
     direction === 'produce'
-      ? items.filter((k, i) => items.findIndex((o) => o.romaji === k.romaji) === i)
+      ? items.filter((k, i) => items.findIndex((o) => cue(o) === cue(k)) === i)
       : items
   return `
     <section class="group">
