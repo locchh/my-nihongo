@@ -14,6 +14,14 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  /* Japanese is read in a textbook (kyōkasho) pen face, not a gothic. In a
+     gothic ツ and シ, ソ and ン are the same three marks at slightly different
+     angles, and a learner cannot tell them apart. In a pen face every stroke
+     shows where it started and where it was pulled: ツ's short strokes hang
+     down and its long stroke sweeps from the top, シ's strokes lie sideways
+     and its long stroke rises from the bottom. */
+  --ja: 'Klee One', 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', Meiryo,
+    'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -27,6 +35,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Every piece of Japanese is tagged lang="ja", so this reaches the cards, the
+   chart, the quiz prompts and choices and the phrases at once. :where keeps
+   it at zero specificity, so the home scene, which sets its own faces, is
+   left alone. */
+:where([lang='ja']) {
+  font-family: var(--ja);
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -640,6 +656,8 @@ code {
 }
 
 .say__ja {
+  /* The scene speaks in its own gothic; the study face is for what is studied. */
+  font-family: inherit;
   font-size: clamp(9px, 2.5cqw, 15px);
   line-height: 1.35;
 }
