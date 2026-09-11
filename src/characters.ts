@@ -101,7 +101,7 @@ const switcher = <T extends string>(
   </div>`
 
 const markup = (): string => `
-  <section class="board">
+  <section class="board board--bamboo">
     <div class="controls">
       ${switcher('Script', 'script', ['hiragana', 'katakana'] as Script[], script, (s) =>
         s === 'hiragana' ? 'Hiragana' : 'Katakana',

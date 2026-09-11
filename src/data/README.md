@@ -104,9 +104,12 @@ the chart and are left out of the cards and the test.
 
 ## What is still in code
 
-Only two lists, and neither grows with the material:
+Only three lists, and none grows with the material:
 
 - the five kana groups — base, dakuten, handakuten, yōon, extended — in `characters.ts`,
   which is the fixed shape of the writing system
+- the sound rules under the wall chart — long vowels and the small tsu, one
+  table per script with an example word each — in `chart.ts`, which is spelling
+  rather than vocabulary
 - the sections themselves, in `types.ts`, which is navigation rather than
   content

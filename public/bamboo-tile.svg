@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 184" aria-hidden="true">
+  <defs>
+    <linearGradient id="pole" x1="0" x2="1">
+      <stop offset="0" stop-color="#d4b46a"/>
+      <stop offset="0.18" stop-color="#eed898"/>
+      <stop offset="0.42" stop-color="#fbf2cf"/>
+      <stop offset="0.62" stop-color="#f4e5ae"/>
+      <stop offset="0.86" stop-color="#e3c77c"/>
+      <stop offset="1" stop-color="#c9a659"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" x2="1">
+      <stop offset="0" stop-color="#bf9a4a"/>
+      <stop offset="0.4" stop-color="#e6cc85"/>
+      <stop offset="0.6" stop-color="#e6cc85"/>
+      <stop offset="1" stop-color="#b8924a"/>
+    </linearGradient>
+  </defs>
+  <!-- one pole, one joint; tiled, the joints line up across the board -->
+  <rect width="32" height="184" fill="#b9975a"/>
+  <rect x="1" y="0" width="30" height="184" fill="url(#pole)"/>
+  <rect x="-0.5" y="149" width="33" height="2.5" fill="#a07d3a" opacity="0.4"/>
+  <rect x="-0.5" y="151" width="33" height="6" rx="2.5" fill="url(#node)"/>
+  <rect x="0" y="157" width="32" height="2" fill="#fff8dc" opacity="0.8"/>
+</svg>

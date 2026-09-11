@@ -43,6 +43,11 @@
    left alone. */
 :where([lang='ja']) {
   font-family: var(--ja);
+  /* Klee One's regular weight is a light pen line, and at card size the kana
+     read as thin. The semibold is the same hand pressed harder — every stroke
+     still shows its direction, which is the reason for the face — so it is
+     the weight the boards use. */
+  font-weight: 600;
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -656,6 +661,9 @@ code {
 }
 
 .say__ja {
+  /* The bird speaks in the regular weight; the boards' semibold is for kana
+     being studied, and a hand-lettered line should not shout. */
+  font-weight: 400;
   /* The scene speaks in its own gothic; the study face is for what is studied. */
   font-family: inherit;
   font-size: clamp(9px, 2.5cqw, 15px);
@@ -1065,6 +1073,88 @@ code {
   margin: 16px auto;
 }
 
+/* ---------- bamboo boards ---------- */
+
+/*
+ * The wall chart and the character board hang on one big board of bamboo: pale
+ * poles tiled edge to edge from a single drawing, public/bamboo-tile.svg, so
+ * the joints run in one line across the whole width. What the boards put on it
+ * — the cells, the pills, the notes — is left as it is. Only the ink of the
+ * surrounding text darkens, because grey on yellow is too faint to read, and
+ * the borders warm to match.
+ */
+.board--bamboo {
+  --text: #4b3a16;
+  --border: #c9ab68;
+  /* Held off the tabs above and the window edges either side, so the board
+     reads as a thing hung on the wall rather than the wall itself. */
+  margin: 24px clamp(8px, 2vw, 24px) 24px;
+  border-radius: 16px;
+  background:
+    linear-gradient(rgb(255 252 240 / 0.3), rgb(255 252 240 / 0.3)),
+    url('/bamboo-tile.svg') left top / 32px 184px repeat;
+  box-shadow:
+    inset 0 0 0 1px #b08d45,
+    0 1px 2px rgb(22 16 32 / 0.06),
+    0 12px 28px -14px rgb(60 40 10 / 0.45);
+}
+
+/* The sound rules are a sheet of paper pinned to the board, and keep the
+   paper's own ink and rules inside it. */
+.board--bamboo .chart__rules {
+  --text: #6b6375;
+  --border: #e5e4e7;
+  padding: 14px 16px 16px;
+  border-top: 0;
+  border-radius: 12px;
+  background: rgb(255 253 246 / 0.92);
+}
+
+/*
+ * On bamboo the colour bands go. A character is ink on the pole, black and
+ * nothing else, and a cell is only a thin line drawn round it. The line is
+ * solid for a character you have learned and faint for one you have not, which
+ * is the ring's job done without the ring. Turned over, a cell shows a cream
+ * face so the flip is still visible, and the answer is ink on that.
+ */
+.board--bamboo .chart__cell:not(.chart__cell--empty, .chart__cell--label),
+.board--bamboo .card .card__face--front {
+  background: none;
+  color: #1d1508;
+  box-shadow: inset 0 0 0 1px rgb(110 80 25 / 0.3);
+}
+
+.board--bamboo .chart__kana {
+  color: #1d1508;
+
+  &:first-child {
+    border-right-color: rgb(110 80 25 / 0.3);
+  }
+}
+
+.board--bamboo .chart__romaji {
+  background: none;
+  color: #4b3a16;
+  border-top: 1px solid rgb(110 80 25 / 0.3);
+}
+
+.board--bamboo .card .card__face--back {
+  background: rgb(255 251 236 / 0.8);
+  color: #1d1508;
+  box-shadow: inset 0 0 0 1.5px #8a6a2e;
+}
+
+.board--bamboo .card--learned .card__face {
+  box-shadow: inset 0 0 0 2px #8a6a2e;
+}
+
+@media (hover: hover) {
+  .board--bamboo .card:hover .card__face--front {
+    filter: none;
+    background: rgb(255 251 236 / 0.4);
+  }
+}
+
 /* ---------- chart ---------- */
 
 .chart__scroll {
@@ -1155,70 +1245,129 @@ code {
   font-weight: 400;
 }
 
+.chart__rules-note {
+  max-width: 52ch;
+  margin: 0 auto 14px;
+  font-size: 14px;
+
+  /* A word held up as an example should not break in half at a line end. */
+  & [lang='ja'] {
+    white-space: nowrap;
+  }
+}
+
 .chart__rule-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
-.chart__rule {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-width: 0;
-  padding: 12px 18px;
-  font-size: clamp(1.4rem, 4.2vw, 1.9rem);
-  text-align: center;
-}
-
-.chart__rule-mark {
-  display: grid;
-  flex: 0 0 3.6rem;
-  place-items: center;
-  height: 3.6rem;
-  border-radius: 7px;
-  background: var(--code-bg);
-  color: var(--text-h);
-  font-size: 2.8rem;
-  line-height: 1;
-}
-
-.chart__rule > span:last-child {
-  min-width: 0;
-}
-
-.chart__rule strong {
-  color: var(--text-h);
-}
-
-.chart__rule > span:last-child > span {
-  margin-left: 5px;
-  color: var(--text);
-  font-family: var(--mono);
-  font-size: 0.9em;
-}
-
-.chart__rule small {
-  display: block;
-  margin-top: 3px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: var(--text);
-  font-size: 0.8em;
-}
-
-.chart__rule b {
-  font-family: var(--mono);
-  font-weight: 400;
-  color: var(--text-h);
-}
-
-@media (max-width: 560px) {
+@media (max-width: 720px) {
   .chart__rule-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Three columns is about the width of a phone; the wrapper is there for the
+   few screens narrower than that, so the table scrolls rather than the page. */
+.rules__scroll {
+  overflow-x: auto;
+}
+
+.rules {
+  width: 100%;
+  min-width: 18rem;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+.rules caption {
+  padding: 0 0 8px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  text-transform: capitalize;
+
+  & [lang='ja'] {
+    margin-right: 6px;
+    font-size: 1.2em;
+  }
+}
+
+.rules th,
+.rules td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: baseline;
+}
+
+.rules thead th {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* One row per rule, spanning the table: what it is called and what it does. */
+.rules__group th {
+  padding-top: 14px;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--code-bg);
+
+  & strong {
+    margin-right: 4px;
+    font-size: 1.15em;
+    color: var(--text-h);
+  }
+
+  & > span {
+    margin-left: 4px;
+    color: var(--text);
+  }
+
+  & small {
+    display: block;
+    font-size: 0.85em;
+  }
+}
+
+.rules__sound {
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.rules__write {
+  font-size: 1.15em;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.rules__example {
+  & > [lang='ja'] {
+    font-size: 1.3em;
+    color: var(--text-h);
+  }
+
+  & b {
+    font-weight: 700;
+    color: var(--accent);
+  }
+}
+
+.rules__romaji {
+  margin-left: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.rules__vi {
+  margin-left: 6px;
+  font-size: 12px;
 }
 
 /* ---------- practice cards ---------- */
@@ -1696,7 +1845,7 @@ code {
    two or three things stacked together. */
 .cards--hand {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(10px, 2.4vw, 20px);
+  gap: clamp(12px, 3vw, 24px);
   place-content: center;
   max-width: 32rem;
   margin-inline: auto;
@@ -1705,10 +1854,13 @@ code {
 }
 
 /*
- * Made to look like a card you could pick up: portrait, paper white, rounded,
- * and lifted off the page by a shadow. The row's hue survives as a band across
- * the top rather than flooding the whole face — enough to tie the card to its
- * place on the chart, without turning the deck into swatches.
+ * Each card is a set of bamboo poles lashed side by side, the way a bamboo mat
+ * or a raft is made: five poles of pale, sun-dried bamboo, each shaded as a
+ * cylinder, with the joints in line across the set as a mat-maker would cut
+ * them. The poles are one drawing, public/bamboo-poles.svg, cut to cover the
+ * card. Nothing is drawn over them: a dealt card does not show its row's hue,
+ * and the answer face is told apart by its rim alone.
+ * The type is plain ink on the poles: nothing lit behind it, no halo round it.
  *
  * Shared by both decks on purpose. A dealt character and a dealt word are the
  * same gesture, and giving them separate looks would say they were not.
@@ -1720,33 +1872,37 @@ code {
   & .card__face {
     flex-direction: column;
     gap: 6px;
-    padding: 10px;
-    border-radius: 14px;
-    background: var(--bg);
-    color: var(--text-h);
+    padding: 18px 8px;
+    border-radius: 8px;
+    color: #1d1508;
+    background: url('/bamboo-poles.svg') center / cover no-repeat;
     box-shadow:
-      inset 0 6px 0 var(--cell-bg),
-      inset 0 0 0 1px var(--border),
-      0 1px 2px rgb(22 16 32 / 0.06),
-      0 10px 22px -8px rgb(22 16 32 / 0.28);
+      inset 0 0 0 1px #b08d45,
+      0 1px 2px rgb(22 16 32 / 0.08),
+      0 10px 22px -8px rgb(22 16 32 / 0.34);
   }
 
+  /* Turned over, the same poles, rimmed in the accent. */
   & .card__face--back {
     box-shadow:
-      inset 0 6px 0 var(--accent),
-      inset 0 0 0 1px var(--accent-border),
-      0 1px 2px rgb(22 16 32 / 0.06),
-      0 10px 22px -8px rgb(22 16 32 / 0.28);
+      inset 0 0 0 2px var(--accent),
+      0 1px 2px rgb(22 16 32 / 0.08),
+      0 10px 22px -8px rgb(22 16 32 / 0.34);
+  }
+
+  /* The caption is grey on white elsewhere, and grey on yellow is too faint. */
+  & .card__form {
+    color: #4a3510;
   }
 }
 
-/* The learned ring has to sit outside the card's own rim, or the two fight. */
+/* The learned ring sits just inside the card's own rim. */
 .card--word.card--learned .card__face,
 .card--kana.card--learned .card__face {
   box-shadow:
-    inset 0 6px 0 var(--cell-bg),
-    inset 0 0 0 2.5px var(--accent),
-    0 10px 22px -8px rgb(22 16 32 / 0.28);
+    inset 0 0 0 1px #b08d45,
+    inset 0 0 0 3.5px var(--accent),
+    0 10px 22px -8px rgb(22 16 32 / 0.34);
 }
 
 .card__as-word {
@@ -1765,7 +1921,7 @@ code {
 .card__reading {
   font-family: var(--mono);
   font-size: clamp(0.72rem, 2.6vw, 0.9rem);
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 /* The script the front of the card is asking in. Small and set apart, so it
